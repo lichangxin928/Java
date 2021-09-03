@@ -22,8 +22,41 @@ public class Test {
         * （冲刷处理器缓存指的是将缓存的数据刷新到主内存中
         *   刷新处理器缓存是将主存的数据读取到缓存区中）
         *
-        *
+        * 死锁
+        * 当需要获得多个锁时，所有线程获得锁的顺序保持一致就不会有死锁的问题
         * */
+        subThread t1 = new subThread();
+        t1.setName("a");
+        subThread t2 = new subThread();
+        t2.setName("b");
+        t1.start();
+        t2.start();
 
+
+    }
+    static class subThread extends Thread{
+        private static final Object Lock1 = new Object();
+        private static final Object Lock2 = new Object();
+
+        @Override
+        public void run() {
+            if("a".equals(Thread.currentThread().getName())) {
+                synchronized (Lock1) {
+                    System.out.println("线程 a 获得了 Lock1 还需要获得 Lock2");
+                    synchronized (Lock2) {
+                        System.out.println("线程 a 获得了所有资源");
+                    }
+                }
+            }
+            if("b".equals(Thread.currentThread().getName())){
+                synchronized (Lock2) {
+                    System.out.println("b 线程获得了 Lock2 还需要获得 Lock1");
+                    synchronized (Lock1){
+                        System.out.println("b 线程获得了Lock1 能够运行");
+                    }
+                }
+            }
+
+        }
     }
 }
