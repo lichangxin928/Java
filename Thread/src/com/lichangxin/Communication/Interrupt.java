@@ -5,6 +5,9 @@ public class Interrupt {
         /*
         * 当线程处于 wait() 等待状态时，调用 interrupt() 方法会
         * 中断线程的等待，会产生 InterruptedException 异常
+        *
+        * notify() 与 notifyAll()
+        * 一个只能随机唤醒一个线程，另一个能唤醒所有线程
         * */
         subThread t1 = new subThread();
         t1.start();
