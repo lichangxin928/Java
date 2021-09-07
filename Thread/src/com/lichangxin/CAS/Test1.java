@@ -1,6 +1,5 @@
 package com.lichangxin.CAS;
 
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 
 /*
 * 使用CAS实现一个线程安全计数器

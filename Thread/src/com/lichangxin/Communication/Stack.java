@@ -1,7 +1,5 @@
 package com.lichangxin.Communication;
 
-import sun.reflect.generics.scope.DummyScope;
-
 import java.util.ArrayList;
 import java.util.List;
 
