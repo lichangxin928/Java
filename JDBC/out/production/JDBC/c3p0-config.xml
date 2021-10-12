@@ -5,11 +5,11 @@
         <!--  驱动名称  -->
         <property name="driverClass">com.mysql.jdbc.Driver</property>
         <!--  数据库URL  -->
-        <property name="jdbcUrl">jdbc:mysql://localhost:3306/ticketing</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/test</property>
         <!--  用户名  -->
         <property name="user">root</property>
         <!--  密码  -->
-        <property name="password">111</property>
+        <property name="password">123</property>
 
         <!-- 连接池参数 -->
         <!--  初始连接数量  -->
