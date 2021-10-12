@@ -27,5 +27,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.5.71" level="application_server_libraries" />
+    <orderEntry type="library" scope="PROVIDED" name="Tomcat 9.0.54" level="application_server_libraries" />
   </component>
 </module>
