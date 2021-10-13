@@ -1,9 +1,9 @@
-package com.example.jackson.test;
+package com.lcx.jackson.test;
 
-import com.example.jackson.domain.Person;
+import com.lcx.jackson.domain.Person;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;

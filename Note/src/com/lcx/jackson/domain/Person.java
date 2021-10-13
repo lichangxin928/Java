@@ -1,4 +1,4 @@
-package com.example.jackson.domain;
+package com.lcx.jackson.domain;
 
 public class Person {
     private String name;
