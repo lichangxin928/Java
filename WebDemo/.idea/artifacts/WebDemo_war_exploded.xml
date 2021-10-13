@@ -14,6 +14,10 @@
         <element id="directory" name="classes">
           <element id="module-output" name="WebDemo" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: junit:junit:4.13.2" />
+          <element id="library" level="project" name="Maven: org.hamcrest:hamcrest-core:1.3" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/WebDemo-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
