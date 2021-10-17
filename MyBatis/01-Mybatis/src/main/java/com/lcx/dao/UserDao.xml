@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lcx.dao.UserDao">
+    <select id="findAll" resultType="com.lcx.domain.User">
+        <!--
+            select：表示查询操作
+            id：你要执行的sql语法的唯一表示，mybatis 会使用这个id值来找到要执行的sql 语句
+                可以自定义，但是要求用接口方法的名称
+            resultTyep:表示这条select语句执行后得到的 resultset 遍历这个 resultset 得到的结果
+        -->
+        select * from user
+    </select>
+</mapper>
+
+<!--
+    sql 映射文件，mybatis 会自动执行的
+    <!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    是约束文件，必须符合xml 要求
+    mapper 是当前文件的根标签，必须的
+      namespace：叫做命名空间，唯一值，可以是自定义的字符串
+                要求用dao接口的全限定名称
+    在当前文件中，可以使用特定的标签，表示数据库的特定操作
+    <select> <update> <insert> <delete>
+
+-->
