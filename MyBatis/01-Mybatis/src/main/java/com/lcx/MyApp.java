@@ -12,22 +12,29 @@ import java.util.List;
 
 public class MyApp {
     public static void main(String[] args) throws IOException {
-        // 1. 定义主配置文件名称,从类的更路径开始(target/classes)
-        String config = "mybatis.xml";
-        // 2. 读取这个 config 表示的文件
-        InputStream in = Resources.getResourceAsStream(config);
-        // 3. 创建 SqlSessionFactoryBuilder 对象
-        SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
-        // 4. 创建 SqlSessionFactory 对象
-        SqlSessionFactory factory = builder.build(in);
-        // 5. 获取 SqlSession 对象
-        SqlSession sqlSession = factory.openSession();
-        // 6. 指定要执行的 sql 语句的标识 sql 映射文件中的 namespace + "." + 标签的id
-        String sql_id = "com.lcx.dao.UserDao" + "." + "findAll";
-        // 7. 执行 Sql 语句 通过 sqlId找到语句
-        List<User> users = sqlSession.selectList(sql_id);
-        users.forEach(user -> System.out.println(user));
-        sqlSession.close();
+        /**
+         * 主要类
+         *      1. Resources:mybatis 中的一个累，负责读取主配置文件
+         *          InputStream in = Resources.getResourcesAsStream("");
+         *      2. SqlSessionFactoryBuilder : 创建 SqlSessionFactory 对象
+         *          SqlSessionFactoryBuilder builder = new ....
+         *          SqlSessionFactory factory = builder.build(in)
+         *      3. SqlSessionFactory 重量级对象，程序常见一个对象耗时比较长，使用资源比较多
+         *          在整个项目中，有一个就足够了
+         *          SqlSessionFactory：接口 接口实现类：DefaultSqlSessionFactory
+         *          SqlSessionFactory：作用 获取SqlSession对象。SqlSession sqlSession = factory。openSession()
+         *
+         *          openSession() 方法说明
+         *              1. openSession() ： 无参数的，获取是飞自动提交事务的SqlSession 对象
+         *              2. openSession(boolean)：传入参数是否自动提交事务
+         *      4. SqlSession
+         *          SqlSession接口：定义了操作数据库的方法
+         *          SqlSession接口的实现累 DefaultSqlSession
+         *
+         *          使用要求：
+         *              非线程安全的，使用前使用 openSession() 使用后执行 SqlSession.close()
+         *
+         */
     }
 
 }

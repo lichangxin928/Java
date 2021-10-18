@@ -13,6 +13,9 @@
         -->
         select * from user
     </select>
+    <insert id="insertUser">
+        insert into user values (#{id},#{name},#{gender},#{age},#{address},#{qq},#{email})
+    </insert>
 </mapper>
 
 <!--
