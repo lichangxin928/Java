@@ -15,4 +15,14 @@ public class StudentDaoImpl implements StudentDao {
         List<User> list = sqlSession.selectList(sqlId);
         return list;
     }
+
+    @Override
+    public User selectUserById(int id) {
+        return null;
+    }
+
+    @Override
+    public User selectUserByIdAndName(int id, String name) {
+        return null;
+    }
 }

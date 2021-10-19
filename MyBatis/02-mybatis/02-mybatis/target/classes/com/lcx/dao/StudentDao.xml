@@ -7,4 +7,17 @@
     <select id="userList" resultType="com.lcx.domain.User">
         select * from user;
     </select>
+<!--
+    用来表示 dao 接口方法参数的数据类型
+        值是java参数的全限定名称，也能够简写
+        不是强制的，mybatis 通过反射也能找到
+    当传入值有一个参数时，#{任意字符}
+-->
+    <select id="selectUserById" parameterType="int" resultType="user">
+        select * from user where id = #{id}
+    </select>
+
+    <select id="selectUserByIdAndName" resultType="user">
+        select * from user where id = #{id} and name = #{name}
+    </select>
 </mapper>

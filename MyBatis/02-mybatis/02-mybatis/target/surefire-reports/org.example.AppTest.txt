@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: org.example.AppTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.125 s <<< FAILURE! - in org.example.AppTest
+testSelect(org.example.AppTest)  Time elapsed: 0.049 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.example.AppTest.testSelect(AppTest.java:23)
+
