@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+<!--
+    声明组件扫描器
+    遍历包中的所有类，找到类中的注解，按照注解的功能创建对象，或给属性赋值
+
+    加入了 component-scan 标签后，会加入一个新的约束文件，是给这个新的约束文件
+    起个命名空间的名称
+-->
+    <context:component-scan base-package="com.lcx.pa1"/>
+</beans>
