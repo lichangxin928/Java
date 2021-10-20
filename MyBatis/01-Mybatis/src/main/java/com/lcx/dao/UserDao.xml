@@ -16,6 +16,36 @@
     <insert id="insertUser">
         insert into user values (#{id},#{name},#{gender},#{age},#{address},#{qq},#{email})
     </insert>
+
+    <select id="selectUserIf" resultType="com.lcx.domain.User">
+        select * from user
+        where
+        <if test="name != null and name != ''">
+            name = #{name}
+        </if>
+        <if test="age>0">
+            and age > #{age}
+        </if>>
+    </select>
+    <select id="selectUserWhere" resultType="com.lcx.domain.User">
+        select * from user
+        where
+        <where>
+            <if test="name != null and name != ''">
+                name = #{name}
+            </if>
+            <if test="age>0">
+                and age > #{age}
+            </if>>
+        </where>
+
+    </select>
+    <select id="selectUserForeach" resultType="com.lcx.domain.User">
+        select * for user where id in
+        <foreach collection="list" item="i" open="(" close=")" separator=",">
+            #{i}
+        </foreach>
+    </select>
 </mapper>
 
 <!--

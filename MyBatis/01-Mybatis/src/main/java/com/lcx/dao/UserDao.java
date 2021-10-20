@@ -7,4 +7,5 @@ import java.util.List;
 public interface UserDao {
     List<User> findAll();
     int insertUser();
+    List<User> selectUserIf(User user);
 }

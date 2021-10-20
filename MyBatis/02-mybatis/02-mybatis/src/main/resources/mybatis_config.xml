@@ -3,6 +3,8 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+
+    <properties resource="jdbc.properties"/>
     <!--
            environment 环境配置，就是数据库的连接信息
             default 表示使用的唯一配置
@@ -37,17 +39,19 @@
 
             -->
             <dataSource type="POOLED">
-                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="driver" value="${jdbc.driver}"/>
 
-                <property name="url"
-                          value="jdbc:mysql://localhost:3306/test?characterEncoding=utf8&amp;useSSL=false&amp;serverTimezone=UTC"/>
-                <property name="username" value="root"/>
-                <property name="password" value="123"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.user}"/>
+                <property name="password" value="${jdbc.psw}"/>
             </dataSource>
         </environment>
     </environments>
     <mappers>
-        <mapper resource="com/lcx/dao/StudentDao.xml"/>
+<!--        第一种方式-->
+<!--        <mapper resource="com/lcx/dao/StudentDao.xml"/>-->
+<!--        第二种方式 包名-->
+        <package name="com/lcx/dao"/>
     </mappers>
 </configuration>
         <!--

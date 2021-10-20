@@ -75,6 +75,35 @@ public class MyApp {
          *      2. 用拼接的方式
          *
          *
+         *  动态标签
+         *      <if><if/> <where><where/> <foreach><foreach/>
+         *
+         *      1. <if test="判断语句">
+         *              部分 sql 语句
+         *          <if/>
+         *      2. <where> 用来包含多个<if>的， 当多个 if 有一个成立时，<where> 会自动添加一个
+         *                  where 关键字，并且去掉if中多余的 and 和 or 等
+         *      </where>
+         *      3. <foreach><foreach/> 循环 java 中的数组，list 集合，主要用在 sql 的 in 语句中
+         *          select * from user where id in {1,2,3}
+         *
+         *          <foreach collection="" item="" close="" separator=""></foreach>
+         *
+         *          collection 表示接口中的方法参数类似，如果是 数组为 array list 用list
+         *          item：自定义的，表示数组和集合成员的变量
+         *          close：循环结束时的字符
+         *          separator：集合成员之间的分隔符
+         *      4. sql 代码片段
+         *          用来复用一下语法
+         *          1. 先使用  <sql id="自定义名称唯一“> sql 语句 <sql/>
+         *          2. 再使用  <include refid="id的值"/>
+         * 属性配置文件
+         *      1. 将数据库连接信息放到一个单独的文件
+         *      2. 在mybatis的主配置文件中，使用 <property><property/> 指定配置文件的位置
+         *          在需要使用的地方，使用 ${}
+         *
+         * 分页功能
+         *
          */
     }
 
