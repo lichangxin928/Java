@@ -1,2 +1,5 @@
-package com.lcx.service;public interface SomeService {
+package com.lcx.service;
+
+public interface SomeService {
+    void doSome();
 }
