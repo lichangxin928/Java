@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--
+        告诉 Spring 创建对象
+        声明 bean：就是高数Spring 要创建某个类的对象
+        id：对象的自定义名称，唯一只。Spring通过这个名称找到对象
+        class：类的全限定名称
+-->
+<!--
+        等于 SomeService someService = new SomeService();
+        spring 是把创建好的对象放入到map中，spring 框架有一个map存放对象的
+        springMap.put(id,Object)
+-->
+    <bean id="someService" class="com.lcx.service.SomeServiceImpl"></bean>
+    <bean id="date" class="java.util.Date"></bean>
+</beans>
+<!--
+    1. beans 是根标签，Spring 吧java 对象称为 bean
+    2. Spring-bean.xsd 是约束文件
+
+-->

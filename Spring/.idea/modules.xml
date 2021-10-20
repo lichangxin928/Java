@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/01-String_start/01-String_start.iml" filepath="$PROJECT_DIR$/01-String_start/01-String_start.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01-Spring_start/01-Spring_start.iml" filepath="$PROJECT_DIR$/01-Spring_start/01-Spring_start.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02-Spring/02-Spring.iml" filepath="$PROJECT_DIR$/02-Spring/02-Spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03-Spring/03-Spring.iml" filepath="$PROJECT_DIR$/03-Spring/03-Spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Spring.iml" filepath="$PROJECT_DIR$/.idea/Spring.iml" />
     </modules>
   </component>
