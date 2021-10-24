@@ -11,6 +11,8 @@
         <option value="$PROJECT_DIR$/02-Spring/pom.xml" />
         <option value="$PROJECT_DIR$/01-Spring_start/pom.xml" />
         <option value="$PROJECT_DIR$/03-Spring/pom.xml" />
+        <option value="$PROJECT_DIR$/05-Spring-aop-aspectJ/pom.xml" />
+        <option value="$PROJECT_DIR$/06-Spring-mybatis/06-Spring-mybatis/pom.xml" />
       </list>
     </option>
   </component>
