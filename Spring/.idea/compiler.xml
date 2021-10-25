@@ -11,6 +11,7 @@
         <module name="03-Spring" />
         <module name="05-Spring-aop-aspectJ" />
         <module name="06-Spring-mybatis" />
+        <module name="07-Spring+Mybatis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -20,6 +21,7 @@
       <module name="03-Spring" target="1.8" />
       <module name="05-Spring-aop-aspectJ" target="1.8" />
       <module name="06-Spring-mybatis" target="1.8" />
+      <module name="07-Spring+Mybatis" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

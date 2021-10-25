@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 import com.lcx.dao.UserDao;
 import com.lcx.domain.User;
 import org.junit.Test;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.List;
@@ -13,7 +14,7 @@ public class AppTest {
     @Test
     public void Test1() {
         String config = "applicationContext.xml";
-        ClassPathXmlApplicationContext cc = new ClassPathXmlApplicationContext(config);
+        ApplicationContext cc = new ClassPathXmlApplicationContext(config);
         String names[] = cc.getBeanDefinitionNames();
         for (String name : names) {
             System.out.println(name);
@@ -28,5 +29,9 @@ public class AppTest {
         List<User> users = userDao.selectUser();
         System.out.println(users);
 
+    }
+    @Test
+    public void Test3(){
+        System.out.println("hello world");
     }
 }
