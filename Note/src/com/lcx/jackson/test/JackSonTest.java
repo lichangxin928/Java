@@ -1,8 +1,8 @@
 package com.lcx.jackson.test;
 
-import com.lcx.jackson.domain.Person;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.lcx.jackson.domain.Person;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
