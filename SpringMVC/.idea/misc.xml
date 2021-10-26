@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/01-SpringMVC_hello" />
+    <file type="web" url="file://$PROJECT_DIR$/01-SpringMVC_start/src/01-SpringMVC_hello" />
+    <file type="web" url="file://$PROJECT_DIR$/SpringMVC_hello" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/untitled/pom.xml" />
+        <option value="$PROJECT_DIR$/01-SpringMVC_hello/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringMVC_hello/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="corretto-1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
