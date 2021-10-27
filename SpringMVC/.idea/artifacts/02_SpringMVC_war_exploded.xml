@@ -1,10 +1,10 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="01-SpringMVC_hello:war exploded">
-    <output-path>$PROJECT_DIR$/01-SpringMVC_hello/target/01-SpringMVC_hello-1.0-SNAPSHOT</output-path>
+  <artifact type="exploded-war" name="02-SpringMVC:war exploded">
+    <output-path>$PROJECT_DIR$/02-SpringMVC/target/02-SpringMVC-1.0-SNAPSHOT</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
-        <module>01-SpringMVC_hello</module>
+        <module>02-SpringMVC</module>
         <packaging>war</packaging>
         <unpackNestedArchives>false</unpackNestedArchives>
       </options>
@@ -12,7 +12,7 @@
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="01-SpringMVC_hello" />
+          <element id="module-output" name="02-SpringMVC" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:3.0.1" />
@@ -27,9 +27,9 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/01-SpringMVC_hello/target/01-SpringMVC_hello-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/02-SpringMVC/target/02-SpringMVC-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="01-SpringMVC_hello/web/Web" />
+      <element id="javaee-facet-resources" facet="02-SpringMVC/web/Web" />
     </root>
   </artifact>
 </component>
