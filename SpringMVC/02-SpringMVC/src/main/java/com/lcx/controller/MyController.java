@@ -1,8 +1,10 @@
 package com.lcx.controller;
 
 
+import com.lcx.vo.Student;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 
@@ -19,5 +21,15 @@ public class MyController {
         mv.addObject("age",age);
         mv.setViewName("show");
         return mv;
+    }
+
+    @RequestMapping("/doStudent.do")
+    @ResponseBody
+    public Student doStudentResult(String name,Integer age){
+        // 调用 Service 结果请求数据
+        Student student = new Student();
+        student.setName("lisi");
+        student.setAge(20);
+        return student;
     }
 }

@@ -3,8 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/00-SpringMVC_start/00-SpringMVC_start.iml" filepath="$PROJECT_DIR$/00-SpringMVC_start/00-SpringMVC_start.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SpringMVC_1/01-SpringMVC_hello.iml" filepath="$PROJECT_DIR$/SpringMVC_1/01-SpringMVC_hello.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01-SpringMVC_hello/01-SpringMVC_hello.iml" filepath="$PROJECT_DIR$/01-SpringMVC_hello/01-SpringMVC_hello.iml" />
       <module fileurl="file://$PROJECT_DIR$/02-SpringMVC/02-SpringMVC.iml" filepath="$PROJECT_DIR$/02-SpringMVC/02-SpringMVC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSM/SSM.iml" filepath="$PROJECT_DIR$/SSM/SSM.iml" />
     </modules>
   </component>
 </project>

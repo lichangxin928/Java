@@ -2,10 +2,10 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/01-SpringMVC_hello" />
-    <file type="web" url="file://$PROJECT_DIR$/01-SpringMVC_hello" />
     <file type="web" url="file://$PROJECT_DIR$/01-SpringMVC_start/src/01-SpringMVC_hello" />
     <file type="web" url="file://$PROJECT_DIR$/02-SpringMVC" />
     <file type="web" url="file://$PROJECT_DIR$/02-SpringMVC_2" />
+    <file type="web" url="file://$PROJECT_DIR$/SSM" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -17,6 +17,7 @@
         <option value="$PROJECT_DIR$/SpringMVC_1/pom.xml" />
         <option value="$PROJECT_DIR$/02-Spring_MVC/pom.xml" />
         <option value="$PROJECT_DIR$/02-SpringMVC/pom.xml" />
+        <option value="$PROJECT_DIR$/SSM/pom.xml" />
       </list>
     </option>
   </component>

@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="SSM" />
         <module name="02-SpringMVC" />
         <module name="01-SpringMVC_hello" />
       </profile>
@@ -16,6 +17,7 @@
       <module name="02-SpringMVC" target="1.8" />
       <module name="02-SpringMVC_2" target="1.8" />
       <module name="SpringMVC_1" target="1.8" />
+      <module name="SSM" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

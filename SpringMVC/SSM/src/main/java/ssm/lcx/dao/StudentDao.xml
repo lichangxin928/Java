@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ssm.lcx.dao.StudentDao">
+    <select id="selectStudent" resultType="ssm.lcx.domain.Student">
+        select id,name,age from student order by id
+    </select>
+    <insert id="insertStudent" parameterType="ssm.lcx.domain.Student">
+        insert into student(name,age) value (#{name},#{age})
+    </insert>
+
+</mapper>

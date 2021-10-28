@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!--    实体类的包名-->
+    <typeAliases>
+        <package name="ssm.lcx.domain"/>
+    </typeAliases>
+
+    <mappers>
+<!--        使用package 的要求
+            1. 文件名和dao 接口必须完全一致
+            2. 文件名和接口名称比较一样
+-->
+        <package name="ssm.lcx.dao"/>
+    </mappers>
+</configuration>

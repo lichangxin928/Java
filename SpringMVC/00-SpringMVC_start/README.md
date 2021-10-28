@@ -46,7 +46,7 @@
     2. 声明视图解析器，帮助处理视图
 
 ---
-## 3. springmvc 执行过程源码分析：
+### 3. springmvc 执行过程源码分析：
    1. tomcat 启动，创建容器的过程
       通过load-on-start 标签指定的1，创建 DispatcherServlet对象，
       DispatcherServlet 的父类是 HttpServlet ，是一个 Servlet 在被创建时执行 init() 方法
@@ -293,6 +293,7 @@ protected void doFilterInternal(HttpServletRequest request, HttpServletResponse 
         @RequestParam ：解决请求中参数名形参名不一样的问题
             属性：value 请求中的参数名称
                  require 是一个boolean 默认是 true 表示请求中必须包含此参数
+                 produces：使用这个属性定义新的 contentType
             位置：在处理器方法的形参定义的前面
 ```java
 public ModeAndView receiveParam(@RequestParam("rname") String name
@@ -331,4 +332,19 @@ public ModeAndView receiveParam(@RequestParam("rname") String name
                     功能：定义了 java 转为 json、xml 等数据格式的方法。这个接口有很多实现类
                             这些实现类完成 java 对象多json、java 对象到xml ，java对象到二进制数据的转换
 
-    
+            @RequestBody 注解
+                    框架处理流程：
+                    1. 框架会返回该对象，调用框架中的ArrayList<HttpMessageConverter> 中每个类的canWrite()方法
+                    检查那个HttpMessageConverter 接口的实现类能处理Student类型的数据
+                    2. 框架调用实现类的write()，MappingJackson2HTTPMessageConvert的 writ() 方法，将返回的对象
+                    转换为json 刁红jackson的objectMapper 实现转换为 json contenType：Application/json;chartset=utf-8
+                    3. 框架会调用 @RespinseBody 把2 的结果输出到浏览器。
+
+            当返回的值是 List 时 会转换为 JsonArray
+            当有 @RequestBody 注解时，返回值是String 时就会自动转换为 json 格式
+
+### 静态资源的处理方法
+    当设置 url-pattren ——设置中央调度器的url-pattern 是 */* 时，会导致 静态资源访问失败
+    第一种解决静态资源访问的方案：在springmvc 配置文件中 <mvc:default-servlet-handler> 
+        原理：给程序内存中增加一个处理器对象，DefaultHttpRequestHandler，让这个对象处理静态资源
+    第二种静态资源处理方法：<mvc:resource mapping="/static/**" location="/static/"/>
