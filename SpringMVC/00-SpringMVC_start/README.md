@@ -225,7 +225,6 @@ public class MyController {
 </html>
 
 ```
-
 ## 3. 面向注解开发
 ### 1. @RequestMapping 定义请求规则
 
@@ -348,3 +347,191 @@ public ModeAndView receiveParam(@RequestParam("rname") String name
     第一种解决静态资源访问的方案：在springmvc 配置文件中 <mvc:default-servlet-handler> 
         原理：给程序内存中增加一个处理器对象，DefaultHttpRequestHandler，让这个对象处理静态资源
     第二种静态资源处理方法：<mvc:resource mapping="/static/**" location="/static/"/>
+## 4. SpringMVC 核心技术
+### 4.1 请求重定向和转发
+        当处理器对请求处理完毕之后，向其它资源进行跳转时，有两种跳转方式：请求转发与重定向。
+    而根据所要跳转的资源类型，又可以分为两类：跳转到页面与跳转到其他处理器。
+        但是对于请求转发的页面，可以是WEB-INF下的页面，但是重定向不能是这个下的页面，因为用户是
+    无法直接访问到这个路径下的资源的
+    
+    SpringMVC 将 servlet 中的请求转发和重定向进行了封装
+    forward：表示转发
+    redirect：表示重定向
+---
+    forward:
+        从处理器方法返回 ModeAndView 实现转发 forward
+        语法: setViewName("forward:视图文件完整路径")
+        forward特点：不和视图解析器一同使用，就当项目中没有视图解析器。用于转发不在视图解析器的路径
+    redirect:
+        不和视图解析器一同使用，就当项目中没有视图解析器
+        框架会吧Mode 中的简单数据转换为字符串，转换为string 使用，重定向的请求参数使用
+    
+### 4.2 异常处理
+**SpringMVC 框架处理异常的常用方式，使用 @ExceptionHandler 注解处理异常**
+#### 4.2.1 @ExceptionHandler 注解
+        使用注解 @ExceptionHandler 可以将一个方法指定为异常处理方法。该注解只有一个可选属性 value，为一个Class<?> 数组
+    用于指定该注解的方法所要处理的异常，即所要匹配的异常。
+        而被注解的方法，起返回值可以是 ModeAndView String 或 void 方法名随意，方法的参数可以是Exception及其子类对象、
+    HTTPServiceRequest、HTTPServiceResponse 等。系统会自动为这些方法参数赋值
+        对于异常处理注解的用法，也可以直接将 异常处理方法注解与 Controller 之中
+---
+**统一全局异常处理**
+> 把Controller中的所有异常处理都集中到一个地方，AOP 的思想，降低耦合
+**异常处理步骤**
+1. 创建 maven web 项目
+2. 加入依赖
+3. 创建一个自定义异常类， MyUserException，再定义它的子类NameException，AgeException
+4. 在Controller 抛出这个异常
+5. 创建一个普通类，作用全局异常处理类
+   1. 在类的上面加入 ControllerAdvice
+   2. 在类中定义方法，方法上面加入 @ExceptionHandler
+6. 创建处理异常的视图界面
+7. 创建 SpringMVC 配置文件
+   1. 组件扫描器，扫描@Controller 注解
+   2. 组件扫描器，扫描@ControllerAdvice所在的包名
+   3. 声明注解驱动
+
+**@ControllerAdvice ：控制器增强（给控制器增加功能---异常处理）**
+    特点：必须让框架知道这个注解所在的包名，需要在springmvc 配置文件声明组件扫描器
+    指定@ControllerAdvice 所在的方法
+
+处理异常的方法和控制器方法的定义一样，可以有多个参数，可以有多个返回值ModeAndView、String、void 等
+
+形参：Exception，表示Controller 中所抛出的异常对象
+通过形参可以获取发生的异常信息
+
+@ExceptionHandler(异常的class)：表示异常的类型，当发送此类型异常时，有当前方法处理
+
+异常发生处理逻辑：
+    1. 需要把异常记录下来，记录到数据库，日志文件
+    记录时间，哪个方法发生的，异常错误内容
+    2. 发送通知
+    3. 给用户友好的提示
+
+### 4.3 拦截器
+    SpringMVC 中的Interceptor 拦截器是非常重要和相当有用的，它的主要作用是拦截指定的用户请求，并进行相应的预处理和后处理
+    其拦截时间点在"处理器映射起根据用户提交的请求映射出了所要执行的处理器类而且也找到了要指定改处理器类的处理器适配器，
+    在处理器适配器执行处理器之前"，当然，在处理器映射出所要执行的处理器类时，已经将拦截器与处理器和为了一个处理器执行链，
+    并返回给中央调度器。
+
+    1. 需要实现HandlerInterceptor 接口
+    2. 拦截器和过滤器类似，但是过滤器主要用啦过滤请求参数，设置编码字符集等工作
+    3. 拦截器是全局的，可以对多个Controller 做拦截
+        一个项目中可以存在多个拦截器，一般使用在用户登录处理，权限检查，记录日志
+
+#### 4.3.1 一个拦截器的执行
+
+**拦截器使用步骤**
+1. 定义类实现HandlerInterceptor 接口
+2. 在SpringMVC 配置文件中声明拦截器。
+
+**执行时间**
+1. 在Controller类中的方法执行之前被拦截
+2. 在控制器方法执行之后也会执行拦截器
+3. 在请求处理完成后也会执行拦截器
+
+```java
+import org.springframework.web.servlet.HandlerInterceptor;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class MyInterceptor implements HandlerInterceptor {
+    /**
+     * preHandel 叫做预处理方法
+     * 特点：
+     *  1. 方法在控制器方法（MyController 的 doSome）之前先执行的
+     *      用户的请求首先到达的方法
+     *  2. 在这个方法中可以获取请求的信息，验证请求是否符合要求
+     *      可以验证用户是否有权限连接某个地址
+     *      如果验证失败，可以截断请求，请求不能被处理
+     *      如果验证成功，可以放行请求，此时控制器方法才能执行。
+     * @param handler 被拦截的控制器对象
+     *
+     */
+    @Override
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        System.out.println("preHandle");
+        return true;  // 为 true 放行，为 false 不放行
+    }
+
+
+    /**
+     * 后处理方法
+     *
+     * 特点：在 Controller 的doSome 方法后执行的，能够获取到处理器方法的返回值
+     *      ModeAndView，可以修改ModeAndView中的数据和视图，可以影响到最后执行的结果
+     *      主要是对结果做二次修正
+     *
+     * @param request
+     * @param response
+     * @param handler   被拦截器执行的的 Controller 对象
+     * @param modelAndView  处理方法的返回值
+     * @throws Exception
+     */
+    @Override
+    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
+        System.out.println("postHandle");
+    }
+
+    /**
+     * 最后执行的方法
+     *
+     * 特点：
+     * 1、在请求处理完成后执行。框架中当视图处理完成后，对视图执行了forward 。就认为请求处理完成。
+     * 2、一般做资源回收工作，把占用的内存回收
+     * @param request
+     * @param response
+     * @param handler   被拦截的Controller 处理对象
+     * @param ex        程序中发生的异常
+     * @throws Exception
+     */
+    @Override
+    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
+        System.out.println("afterCompletion");
+    }
+}
+
+```
+**拦截器：看作多个Controller 中公用的功能，就是 AOP 的思想**
+
+**多个拦截器执行顺序**
+
+在框架中保存的是一个 ArrayList 集合来存储，所以是按照配置的先后顺序
+例如现在有两个拦截器，那么执行的顺序是
+1-1 --> 2-1 --> 2-2 --> 1-2 --> 2-3 --> 1-3（第一个数字代表第几个拦截器，第二个数字代表对应的三个方法）
+如果第一个为 true 第二个 为 false
+1-1 --> 2-1 --> 1-3
+第一个为false 时后面方法都不执行
+
+**拦截器和过滤器的区别**
+1. 过滤器是 servlet 中的对象，拦截器是框架中的对象。
+2. 过滤器是实训 Filter接口对象，拦截器是实现 HandlerInterceptor
+3. 过滤器是用啦设置 request，response的参数，属性，侧重对数据的过滤。拦截器是用来验证请求的
+4. 过滤是在拦截器之前执行的
+5. 过滤器是tomcat服务器创建的对象，拦截器是springMVC创建的对象
+6. 过滤器是一个执行时间点，拦截器有三个执行时间点
+7. 过滤器可以处理 jsp，js，html 等，拦截器是侧重 Controller 对象。如果请求不会被中央调度器接受，那就不会执行拦截内容
+8. 拦截器拦截普通类方法执行，过滤器过滤Servlet请求响应
+
+### 4.4 SpringMVC 处理流程
+    1. 用户发起请求
+    2. DispatcherServlet 接收请求，把对象交给处理器映射器
+        处理器映射器：SpringMVC 中的一种对象，框架把事项了HandleMapping接口的类都叫做映射器
+        处理器映射器的作用：根据请求，从SprintMVC容器对象中获取处理对象（ctx.getBean("beanName"));
+        框架将找到的处理器对象放到一个叫做处理器执行链中（HandlerExecutionChain）的类保存
+        HandlerExecutionChain 类中保存这：1. 处理器对象（MyController）2. 项目中所有拦截器 List<HandlerIntercept>
+    3. DispatcherServlet 把 2 中的HandlerExecutionChain中的处理对象交给了处理器适配器对象（多个）
+        处理器适配器：springMVC中的对象，需要实现HandlerAdapter 接口
+        处理器适配器的作用：执行处理器方法（调用MyController.doSome()得到返回值ModeAndView）
+    4. DispatcherServlet 把 3 中获取的ModeAndView 交给视图解析器对象
+        视图解析器对象：springMVC中的对象，需要实现 ViewResoler接口（可以有多个）
+        视图解析器的作用：组成视图完整路径，使用前缀，后缀并创建 view 对象
+            view 是一个接口，表示视图的，在框架中 jsp、html 不是用 string 来表示的，而是使用view 和他的实现类表示视图
+            InternalResourceView：视图类，表示jsp 文件，视图解析器会创建 InternalResourceView类对象
+            这个对象的里面，有一个属性，是url 
+    5. DispatcherServlet 把 4 步骤中的view 对象获取到，调用view 类中自己的方法让其对自己进行渲染，进行数据填充，形成响应对象
+    6. 中央调度器响应浏览器
+    
+    核心方法 DispatcherServlet.doDispatch()

@@ -18,6 +18,7 @@ public class StudentController {
     // 注册学生
     @RequestMapping("/addStudent.do")
     public ModelAndView addStudent(Student student){
+        System.out.println("开始注册");
         String tips = "注册失败";
         ModelAndView mv = new ModelAndView();
         int nums = service.addStudent(student);
@@ -27,13 +28,17 @@ public class StudentController {
         }
         mv.addObject("tips",tips);
         mv.setViewName("result");
+        System.out.println("注册结束");
         return mv;
     }
     // 处理查询，响应 ajax
     @RequestMapping("/queryStudent.do")
     @ResponseBody
     public List<Student> queryStudent(){
+        System.out.println("开始查询");
         List<Student> students = service.findStudent();
+        System.out.println("查询结束");
         return students;
+
     }
 }

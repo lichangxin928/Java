@@ -18,5 +18,15 @@
     1. 响应 ajax 请求，返回 json
     2. 解决静态访问资源
 -->
-
+    <!--    声明拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!--            指定拦截的请求uri 地址
+                            path：就是uri 地址，可以使用通配符
+            -->
+            <mvc:mapping path="/**"/>
+            <!--            声明拦截器对象-->
+            <bean class="ssm.lcx.handler.MyInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>

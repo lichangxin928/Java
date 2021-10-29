@@ -23,7 +23,7 @@
     <!--spring的上下文-->
 
 
-    <!--    注册 Spring 的监听器-->
+    <!--    注册 Spring 的监听器 服务器启动就创建 spring 容器-->
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:config/applicationContext.xml</param-value>
