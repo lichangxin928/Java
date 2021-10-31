@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="anno1" />
+        <module name="anno04_bean" />
+        <module name="anno2" />
+        <module name="anno3" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="anno04_bean" target="1.8" />
+      <module name="anno1" target="1.8" />
+      <module name="anno2" target="1.8" />
+      <module name="anno3" target="1.8" />
+      <module name="annot1" target="1.8" />
+      <module name="annot2-configuration" target="1.8" />
+      <module name="annot3-componentscan" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/05-Spring-aop-aspectJ/05-Spring-aop-aspectJ.iml" filepath="$PROJECT_DIR$/05-Spring-aop-aspectJ/05-Spring-aop-aspectJ.iml" />
       <module fileurl="file://$PROJECT_DIR$/06-Spring-mybatis/06-Spring-mybatis/06-Spring-mybatis.iml" filepath="$PROJECT_DIR$/06-Spring-mybatis/06-Spring-mybatis/06-Spring-mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/07-Spring+Mybatis/07-Spring+Mybatis.iml" filepath="$PROJECT_DIR$/07-Spring+Mybatis/07-Spring+Mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08-Spring-annotation/08-Spring-annotation.iml" filepath="$PROJECT_DIR$/08-Spring-annotation/08-Spring-annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Spring.iml" filepath="$PROJECT_DIR$/.idea/Spring.iml" />
     </modules>
   </component>

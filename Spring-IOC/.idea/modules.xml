@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/anno04_bean/anno04_bean.iml" filepath="$PROJECT_DIR$/anno04_bean/anno04_bean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/annot1/anno1.iml" filepath="$PROJECT_DIR$/annot1/anno1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/annot2-configuration/anno2.iml" filepath="$PROJECT_DIR$/annot2-configuration/anno2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/annot3-componentscan/anno3.iml" filepath="$PROJECT_DIR$/annot3-componentscan/anno3.iml" />
+    </modules>
+  </component>
+</project>

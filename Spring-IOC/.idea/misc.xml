@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/annotation-demo1/pom.xml" />
+        <option value="$PROJECT_DIR$/annotation-demo2/pom.xml" />
+        <option value="$PROJECT_DIR$/annot3/pom.xml" />
+        <option value="$PROJECT_DIR$/annot1/pom.xml" />
+        <option value="$PROJECT_DIR$/annot2-configuration/pom.xml" />
+        <option value="$PROJECT_DIR$/annot3-componentscan/pom.xml" />
+        <option value="$PROJECT_DIR$/anno04_bean/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
