@@ -16,25 +16,25 @@ import java.util.*;
  * @author 黑马程序员
  * @Company http://www.itheima.com
  */
-public class CustomeImportSelector implements ImportSelector{
+public class CustomerImportSelector implements ImportSelector{
 
     //表达式（ASPECTJ表达式）
     private String expression;
 
     //使用者指定的包名
-    private String customePackage;
+    private String customerPackage;
 
     /**
      * 默认构造函数
      * 用于读取配置文件，给表达式赋值
      */
-    public CustomeImportSelector(){
+    public CustomerImportSelector(){
         try{
             //1.获取properties对象
             Properties properties = PropertiesLoaderUtils.loadAllProperties("customerimport.properties");
             //2.给expression赋值
             expression = properties.getProperty("custome.importselector.expression");
-            customePackage = properties.getProperty("custome.importselect.package");
+            customerPackage = properties.getProperty("custome.importselect.package");
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -73,15 +73,15 @@ public class CustomeImportSelector implements ImportSelector{
         }
 
         //判断是否配置了客户自定义的包名
-        if(!StringUtils.isEmpty(customePackage)){
-            basePackages.add(customePackage);
+        if(!StringUtils.isEmpty(customerPackage)){
+            basePackages.add(customerPackage);
         }
 
 
         //8.创建类路径扫描器   参数的含义：表明不使用默认过滤规则
         ClassPathScanningCandidateComponentProvider scanner = new ClassPathScanningCandidateComponentProvider(false);
         //9.创建类型过滤器（此处使用的是AspectJ表达式类型的过滤器）
-        TypeFilter typeFilter = new AspectJTypeFilter(expression,CustomeImportSelector.class.getClassLoader());
+        TypeFilter typeFilter = new AspectJTypeFilter(expression, CustomerImportSelector.class.getClassLoader());
         //10.把类型过滤器添加到扫描器中
         scanner.addIncludeFilter(typeFilter);
         //11.定义要扫描类的全限定类名集合

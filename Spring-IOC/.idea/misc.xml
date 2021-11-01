@@ -10,6 +10,19 @@
         <option value="$PROJECT_DIR$/annot2-configuration/pom.xml" />
         <option value="$PROJECT_DIR$/annot3-componentscan/pom.xml" />
         <option value="$PROJECT_DIR$/anno04_bean/pom.xml" />
+        <option value="$PROJECT_DIR$/anno1/pom.xml" />
+        <option value="$PROJECT_DIR$/anno2/pom.xml" />
+        <option value="$PROJECT_DIR$/anno3/pom.xml" />
+        <option value="$PROJECT_DIR$/anno05_import/pom.xml" />
+        <option value="$PROJECT_DIR$/anno06_import_importselector/pom.xml" />
+        <option value="$PROJECT_DIR$/anno07_import_importbeandefinitionregistrar/pom.xml" />
+        <option value="$PROJECT_DIR$/anno08_propertysource/pom.xml" />
+        <option value="$PROJECT_DIR$/anno09_propertysource_propertysourcefactory/pom.xml" />
+        <option value="$PROJECT_DIR$/anno10_dependson/pom.xml" />
+        <option value="$PROJECT_DIR$/anno11_lazy/pom.xml" />
+        <option value="$PROJECT_DIR$/anno12_conditional/pom.xml" />
+        <option value="$PROJECT_DIR$/anno13_profile/pom.xml" />
+        <option value="$PROJECT_DIR$/anno14_basic_anno/pom.xml" />
       </list>
     </option>
   </component>

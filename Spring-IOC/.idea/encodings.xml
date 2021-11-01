@@ -3,8 +3,28 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/anno04_bean/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/anno04_bean/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anno05_import/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anno05_import/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anno06_import_importselector/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anno06_import_importselector/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anno07_import_importbeandefinitionregistrar/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anno07_import_importbeandefinitionregistrar/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anno08_propertysource/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anno08_propertysource/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anno09_propertysource_propertysourcefactory/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anno09_propertysource_propertysourcefactory/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/anno1/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/anno1/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anno10_dependson/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anno10_dependson/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anno11_lazy/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anno11_lazy/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anno12_conditional/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anno12_conditional/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anno13_profile/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anno13_profile/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anno14_basic_anno/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anno14_basic_anno/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/anno2/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/anno2/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/anno3/src/main/java" charset="UTF-8" />
