@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/anno01_configuration/anno01_configuration.iml" filepath="$PROJECT_DIR$/anno01_configuration/anno01_configuration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anno02_componentscan/anno02_componentscan.iml" filepath="$PROJECT_DIR$/anno02_componentscan/anno02_componentscan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anno03_componentscan_filter/anno03_componentscan_filter.iml" filepath="$PROJECT_DIR$/anno03_componentscan_filter/anno03_componentscan_filter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anno04_bean/anno04_bean.iml" filepath="$PROJECT_DIR$/anno04_bean/anno04_bean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anno05_import/anno05_import.iml" filepath="$PROJECT_DIR$/anno05_import/anno05_import.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anno06_import_importselector/anno06_import_importselector.iml" filepath="$PROJECT_DIR$/anno06_import_importselector/anno06_import_importselector.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anno07_import_importbeandefinitionregistrar/anno07_import_importbeandefinitionregistrar.iml" filepath="$PROJECT_DIR$/anno07_import_importbeandefinitionregistrar/anno07_import_importbeandefinitionregistrar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anno08_propertysource/anno08_propertysource.iml" filepath="$PROJECT_DIR$/anno08_propertysource/anno08_propertysource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anno09_propertysource_propertysourcefactory/anno09_propertysource_propertysourcefactory.iml" filepath="$PROJECT_DIR$/anno09_propertysource_propertysourcefactory/anno09_propertysource_propertysourcefactory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anno10_dependson/anno10_dependson.iml" filepath="$PROJECT_DIR$/anno10_dependson/anno10_dependson.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anno11_lazy/anno11_lazy.iml" filepath="$PROJECT_DIR$/anno11_lazy/anno11_lazy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anno12_conditional/anno12_conditional.iml" filepath="$PROJECT_DIR$/anno12_conditional/anno12_conditional.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anno13_profile/anno13_profile.iml" filepath="$PROJECT_DIR$/anno13_profile/anno13_profile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anno14_basic_anno/anno14_basic_anno.iml" filepath="$PROJECT_DIR$/anno14_basic_anno/anno14_basic_anno.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anno15_jsr_annotation/anno15_jsr_annotation.iml" filepath="$PROJECT_DIR$/anno15_jsr_annotation/anno15_jsr_annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anno16_primary/anno16_primary.iml" filepath="$PROJECT_DIR$/anno16_primary/anno16_primary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anno17_lifecycle/anno17_lifecycle.iml" filepath="$PROJECT_DIR$/anno17_lifecycle/anno17_lifecycle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/annotation_demo/annotation_demo.iml" filepath="$PROJECT_DIR$/annotation_demo/annotation_demo.iml" />
+    </modules>
+  </component>
+</project>

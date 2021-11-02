@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/annotation_demo/pom.xml" />
+        <option value="$PROJECT_DIR$/anno01_configuration/pom.xml" />
+        <option value="$PROJECT_DIR$/anno02_componentscan/pom.xml" />
+        <option value="$PROJECT_DIR$/anno03_componentscan_filter/pom.xml" />
+        <option value="$PROJECT_DIR$/anno04_bean/pom.xml" />
+        <option value="$PROJECT_DIR$/anno05_import/pom.xml" />
+        <option value="$PROJECT_DIR$/anno06_import_importselector/pom.xml" />
+        <option value="$PROJECT_DIR$/anno07_import_importbeandefinitionregistrar/pom.xml" />
+        <option value="$PROJECT_DIR$/anno08_propertysource/pom.xml" />
+        <option value="$PROJECT_DIR$/anno09_propertysource_propertysourcefactory/pom.xml" />
+        <option value="$PROJECT_DIR$/anno10_dependson/pom.xml" />
+        <option value="$PROJECT_DIR$/anno11_lazy/pom.xml" />
+        <option value="$PROJECT_DIR$/anno12_conditional/pom.xml" />
+        <option value="$PROJECT_DIR$/anno13_profile/pom.xml" />
+        <option value="$PROJECT_DIR$/anno14_basic_anno/pom.xml" />
+        <option value="$PROJECT_DIR$/anno15_jsr_annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/anno16_primary/pom.xml" />
+        <option value="$PROJECT_DIR$/anno17_lifecycle/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

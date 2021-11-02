@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="anno01_configuration" />
+        <module name="anno02_componentscan" />
+        <module name="anno03_componentscan_filter" />
+        <module name="anno04_bean" />
+        <module name="anno05_import" />
+        <module name="anno06_import_importselector" />
+        <module name="anno07_import_importbeandefinitionregistrar" />
+        <module name="anno08_propertysource" />
+        <module name="anno09_propertysource_propertysourcefactory" />
+        <module name="anno10_dependson" />
+        <module name="anno11_lazy" />
+        <module name="anno12_conditional" />
+        <module name="anno13_profile" />
+        <module name="anno14_basic_anno" />
+        <module name="anno15_jsr_annotation" />
+        <module name="anno16_primary" />
+        <module name="anno17_lifecycle" />
+        <module name="annotation_demo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="anno01_configuration" target="1.8" />
+      <module name="anno02_componentscan" target="1.8" />
+      <module name="anno03_componentscan_filter" target="1.8" />
+      <module name="anno04_bean" target="1.8" />
+      <module name="anno05_import" target="1.8" />
+      <module name="anno06_import_importselector" target="1.8" />
+      <module name="anno07_import_importbeandefinitionregistrar" target="1.8" />
+      <module name="anno08_propertysource" target="1.8" />
+      <module name="anno09_propertysource_propertysourcefactory" target="1.8" />
+      <module name="anno10_dependson" target="1.8" />
+      <module name="anno11_lazy" target="1.8" />
+      <module name="anno12_conditional" target="1.8" />
+      <module name="anno13_profile" target="1.8" />
+      <module name="anno14_basic_anno" target="1.8" />
+      <module name="anno15_jsr_annotation" target="1.8" />
+      <module name="anno16_primary" target="1.8" />
+      <module name="anno17_lifecycle" target="1.8" />
+      <module name="annotation_demo" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
