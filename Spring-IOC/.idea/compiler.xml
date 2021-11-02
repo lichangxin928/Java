@@ -7,7 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="anno08_propertysource" />
+        <module name="anno15_jsr_annotation" />
         <module name="anno1" />
+        <module name="anno16_primary" />
         <module name="anno05_import" />
         <module name="anno06_import_importselector" />
         <module name="anno04_bean" />
@@ -16,6 +18,7 @@
         <module name="anno14_basic_anno" />
         <module name="anno07_import_importbeandefinitionregistrar" />
         <module name="anno09_propertysource_propertysourcefactory" />
+        <module name="anno17_lifecycle" />
         <module name="anno12_conditional" />
         <module name="anno11_lazy" />
         <module name="anno13_profile" />
@@ -35,6 +38,9 @@
       <module name="anno12_conditional" target="1.8" />
       <module name="anno13_profile" target="1.8" />
       <module name="anno14_basic_anno" target="1.8" />
+      <module name="anno15_jsr_annotation" target="1.8" />
+      <module name="anno16_primary" target="1.8" />
+      <module name="anno17_lifecycle" target="1.8" />
       <module name="anno2" target="1.8" />
       <module name="anno3" target="1.8" />
       <module name="annot1" target="1.8" />

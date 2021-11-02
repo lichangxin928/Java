@@ -1,5 +1,5 @@
-## Spring 面向注解开发
-
+# Spring 面向注解开发
+## SpringIOC 的注解
 ### 1. 用于注册驱动的注解
     1. @Configuration
         作用：
@@ -141,3 +141,120 @@
             如果类没有被spring接管，那么里面的属性和方法上的注解都不会被解析。
     2. @Qualifier 作用于 @Autowrite 下面，当有多个实例时，可以指定名称
     3. @Scope 控制是否是单例的
+
+###4. 用于注入数据的注解
+    
+    1. @Autowired
+        作用：
+	        自动按照类型注入。当ioc容器中有且只有一个类型匹配时可以直接注入成功。当有超过一个匹配时，
+            则使用变量名称（写在方法上就是方法名称）作为bean的id，在符合类型的bean中再次匹配，能匹配上就可以注入成功。
+            当匹配不上时，是否报错要看required属性的取值。
+        属性：
+            required：是否必须注入成功。默认值是true，表示必须注入成功。当取值为true的时候，注入不成功会报错。
+        使用场景：
+            此注解的使用场景非常之多，在实际开发中应用广泛。
+            通常情况下我们自己写的类中注入依赖bean对象时，都可以采用此注解。
+
+    2. @Qualifier
+        作用：当使用自动按类型注入时，遇到有多个类型匹配的时候，就可以使用此注解来明确注入哪个bean对象。
+            注意它通常情况下都必须配置@Autowired注解一起使用
+        属性：
+            value：用于指定bean的唯一标识。
+        使用场景：
+            在我们的项目开发中，很多时候都会用到消息队列，我们一ActiveMQ为例。
+            当和spring整合之后，Spring框架提供了一个JmsTemplate对象，它既可以用于发送点对点模型消息也可以发送主题模型消息。
+            如果项目中两种消息模型都用上了，那么针对不同的代码，将会注入不同的JmsTemplate，而容器中出现两个之后，
+            就可以使用此注解注入。当然不用也可以，我们只需要把要注入的变量名称改为和要注入的bean的id一致即可。
+
+    3. @Resource
+        作用：
+	        此注解来源于JSR规范（Java Specification Requests）,其作用是找到依赖的组件注入到应用来，
+            它利用了JNDI（Java Naming and Directory Interface Java命名目录接口 J2EE规范之一）技术查找所需的资源。
+	        默认情况下，即所有属性都不指定，它默认按照byType的方式装配bean对象。
+            如果指定了name，没有指定type，则采用byName。如果没有指定name，而是指定了type，
+            则按照byType装配bean对象。当byName和byType都指定了，两个都会校验，有任何一个不符合条件就会报错。
+        属性：
+            name：资源的JNDI名称。在spring的注入时，指定bean的唯一标识。
+            type：指定bean的类型。
+            lookup:引用指向的资源的名称。它可以使用全局JNDI名称链接到任何兼容的资源。
+            authenticationType:指定资源的身份验证类型。它只能为任何受支持类型的连接工厂的资源指定此选项，而不能为其他类型的资源指定此选项。
+            shareable：指定此资源是否可以在此组件和其他组件之间共享。
+            mappedName：指定资源的映射名称。
+            description：指定资源的描述。
+        使用场景：
+            当我们某个类的依赖bean在ioc容器中存在多个的时候，可以使用此注解指定特定的bean对象注入。
+            当然我们也可以使用@Autowired配合@Qualifier注入。
+         
+    4. @Value
+        作用：
+	        用于注入基本类型和String类型的数据。它支持spring的EL表达式，可以通过${} 的方式获取配置文件中的数据。
+            配置文件支持properties,xml和yml文件。
+        属性：
+            value:指定注入的数据或者spring的el表达式。
+        使用场景：
+            在实际开发中，像连接数据库的配置，发送邮件的配置等等，都可以使用配置文件配置起来。
+            此时读取配置文件就可以借助spring的el表达式读取。
+    
+    5. @Inject
+        作用：
+            它也是用于建立依赖关系的。和@Resource和@Autowired的作用是一样。在使用之前需要先导入坐标：
+            <!-- https://mvnrepository.com/artifact/javax.inject/javax.inject -->
+            <dependency>
+                <groupId>javax.inject</groupId>
+                <artifactId>javax.inject</artifactId>
+                <version>1</version>
+            </dependency>
+            但是他们之前也有区别：
+                @Autowired：来源于spring框架自身。
+                            默认是byType自动装配，当配合了@Qualifier注解之后，由@Qualifier实现byName装配。它有一个required属性，用于指定是否必须注入成功。
+                @Resource：来源于JSR-250规范。
+                          在没有指定name属性时是byType自动装配，当指定了name属性之后，采用byName方式自动装配。
+                @Inject：来源于JSR-330规范。（JSR330是Jcp给出的官方标准反向依赖注入规范。）
+                         它不支持任何属性，但是可以配合@Qualifier或者@Primary注解使用。
+                         同时，它默认是采用byType装配，当指定了JSR-330规范中的@Named注解之后，变成byName装配。
+            
+            属性：无
+            使用场景：
+                在使用@Autowired注解的地方，都可以替换成@Inject。它也可以出现在方法上，构造函数上和字段上，
+                但是需要注意的是：因为JRE无法决定构造方法注入的优先级，所以规范中规定类中只能有一个构造方法带@Inject注解。
+
+    6. @Primary
+        作用：用于指定bean的注入优先级。被@Primary修饰的bean对象优先注入
+        属性：无
+        使用场景：
+            当我们的依赖对象，有多个存在时，@Autowired注解已经无法完成功能，
+            此时我们首先想到的是@Qualifier注解指定依赖bean的id。但是此时就产生了，无论有多少个bean，
+            每次都会使用指定的bean注入。但是当我们使用@Primary，表示优先使用被@Primary注解的bean，
+            但是当不存在时还会使用其他的。
+
+### 5. 生命周期以及作用范围的注解
+    
+    1. @Scope
+        作用：用于指定bean对象的作用范围。
+        属性：
+            value:指定作用范围的取值。在注解中默认值是""。
+                  但是在spring初始化容器时，会借助ConfigurableBeanFactory接口中的类成员：
+                    String SCOPE_SINGLETON = "singleton";
+            scopeName:它和value的作用是一样的。
+            proxyMode:它是指定bean对象的代理方式的。指定的是ScopedProxyMode枚举的值
+            DEFAULT：默认值。（就是NO）
+            NO：不使用代理。
+            INTERFACES：使用JDK官方的基于接口的代理。
+            TARGET_CLASS：使用CGLIB基于目标类的子类创建代理对象。
+        使用场景：
+            在实际开发中，我们的bean对象默认都是单例的。通常情况下，被spring管理的bean都使用单例模式来创建。
+            但是也有例外，例如Struts2框架中的Action，由于有模型驱动和OGNL表达式的原因，就必须配置成多例的。
+
+    2. @PostConstruct
+        作用：用于指定bean对象的初始化方法。
+        属性：无
+        使用场景：在bean对象创建完成后，需要对bean中的成员进行一些初始化的操作时，就可以使用此注解配置一个初始化方法，
+                完成一些初始化的操作。
+
+    3. @PreDestroy
+        作用：用于指定bean对象的销毁方法。
+        属性：无
+        使用场景：在bean对象销毁之前，可以进行一些清理操作。
+
+## SpringAOP 的注解
+    

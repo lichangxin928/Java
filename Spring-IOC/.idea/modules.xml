@@ -14,6 +14,9 @@
       <module fileurl="file://$PROJECT_DIR$/anno12_conditional/anno12_conditional.iml" filepath="$PROJECT_DIR$/anno12_conditional/anno12_conditional.iml" />
       <module fileurl="file://$PROJECT_DIR$/anno13_profile/anno13_profile.iml" filepath="$PROJECT_DIR$/anno13_profile/anno13_profile.iml" />
       <module fileurl="file://$PROJECT_DIR$/anno14_basic_anno/anno14_basic_anno.iml" filepath="$PROJECT_DIR$/anno14_basic_anno/anno14_basic_anno.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anno15_jsr_annotation/anno15_jsr_annotation.iml" filepath="$PROJECT_DIR$/anno15_jsr_annotation/anno15_jsr_annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anno16_primary/anno16_primary.iml" filepath="$PROJECT_DIR$/anno16_primary/anno16_primary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anno17_lifecycle/anno17_lifecycle.iml" filepath="$PROJECT_DIR$/anno17_lifecycle/anno17_lifecycle.iml" />
       <module fileurl="file://$PROJECT_DIR$/anno2/anno2.iml" filepath="$PROJECT_DIR$/anno2/anno2.iml" />
       <module fileurl="file://$PROJECT_DIR$/anno3/anno3.iml" filepath="$PROJECT_DIR$/anno3/anno3.iml" />
     </modules>
