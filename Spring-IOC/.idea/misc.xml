@@ -26,7 +26,13 @@
         <option value="$PROJECT_DIR$/anno15_jsr_annotation/pom.xml" />
         <option value="$PROJECT_DIR$/anno16_primary/pom.xml" />
         <option value="$PROJECT_DIR$/anno17_lifecycle/pom.xml" />
+        <option value="$PROJECT_DIR$/anno18/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/anno17_lifecycle/anno18/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="1.8" project-jdk-type="JavaSDK">

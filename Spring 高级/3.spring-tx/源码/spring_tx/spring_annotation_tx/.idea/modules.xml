@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/tx01_usejdbctemplate/tx01_usejdbctemplate.iml" filepath="$PROJECT_DIR$/tx01_usejdbctemplate/tx01_usejdbctemplate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tx02_designjdbctemplate/tx02_designjdbctemplate.iml" filepath="$PROJECT_DIR$/tx02_designjdbctemplate/tx02_designjdbctemplate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tx03_annotation_transactiondemo/tx03_annotation_transactiondemo.iml" filepath="$PROJECT_DIR$/tx03_annotation_transactiondemo/tx03_annotation_transactiondemo.iml" />
+    </modules>
+  </component>
+</project>

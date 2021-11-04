@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/aop01_proxy/pom.xml" />
+        <option value="$PROJECT_DIR$/aop02_aopannotation_demo/pom.xml" />
+        <option value="$PROJECT_DIR$/aop03_annotation_enableaspectjautoproxy/pom.xml" />
+        <option value="$PROJECT_DIR$/aop04_annotation_aspect/pom.xml" />
+        <option value="$PROJECT_DIR$/aop05_annotation_pointcut/pom.xml" />
+        <option value="$PROJECT_DIR$/aop06_annotation_advicetype_general/pom.xml" />
+        <option value="$PROJECT_DIR$/aop07_annotation_around/pom.xml" />
+        <option value="$PROJECT_DIR$/myAop/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

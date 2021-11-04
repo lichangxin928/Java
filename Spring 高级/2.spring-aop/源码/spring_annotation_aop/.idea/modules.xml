@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/aop01_proxy/aop01_proxy.iml" filepath="$PROJECT_DIR$/aop01_proxy/aop01_proxy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aop02_aopannotation_demo/aop02_aopannotation_demo.iml" filepath="$PROJECT_DIR$/aop02_aopannotation_demo/aop02_aopannotation_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aop03_annotation_enableaspectjautoproxy/aop03_annotation_enableaspectjautoproxy.iml" filepath="$PROJECT_DIR$/aop03_annotation_enableaspectjautoproxy/aop03_annotation_enableaspectjautoproxy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aop04_annotation_aspect/aop04_annotation_aspect.iml" filepath="$PROJECT_DIR$/aop04_annotation_aspect/aop04_annotation_aspect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aop05_annotation_pointcut/aop05_annotation_pointcut.iml" filepath="$PROJECT_DIR$/aop05_annotation_pointcut/aop05_annotation_pointcut.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aop06_annotation_advicetype_general/aop06_annotation_advicetype_general.iml" filepath="$PROJECT_DIR$/aop06_annotation_advicetype_general/aop06_annotation_advicetype_general.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aop07_annotation_around/aop07_annotation_around.iml" filepath="$PROJECT_DIR$/aop07_annotation_around/aop07_annotation_around.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myAop/myAop.iml" filepath="$PROJECT_DIR$/myAop/myAop.iml" />
+    </modules>
+  </component>
+</project>

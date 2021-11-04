@@ -1,5 +1,6 @@
 package config;
 
+import com.itheima.utils.LogUtil;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
@@ -8,6 +9,6 @@ import org.springframework.context.annotation.Configuration;
  * @Company http://www.itheima.com
  */
 @Configuration
-@ComponentScan("com.itheima")
+@ComponentScan(value = "com.itheima",excludeFilters = {@ComponentScan.Filter(LogUtil.class)} )
 public class SpringConfiguration {
 }

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="aop05_annotation_pointcut" />
+        <module name="aop01_proxy" />
+        <module name="aop06_annotation_advicetype_general" />
+        <module name="aop07_annotation_around" />
+        <module name="aop02_aopannotation_demo" />
+        <module name="aop03_annotation_enableaspectjautoproxy" />
+        <module name="aop04_annotation_aspect" />
+        <module name="myAop" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="aop01_proxy" target="1.8" />
+      <module name="aop02_aopannotation_demo" target="1.8" />
+      <module name="aop03_annotation_enableaspectjautoproxy" target="1.8" />
+      <module name="aop04_annotation_aspect" target="1.8" />
+      <module name="aop05_annotation_pointcut" target="1.8" />
+      <module name="aop06_annotation_advicetype_general" target="1.8" />
+      <module name="aop07_annotation_around" target="1.8" />
+      <module name="myAop" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
