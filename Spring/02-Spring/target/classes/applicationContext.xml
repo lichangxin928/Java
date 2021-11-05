@@ -5,7 +5,7 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 <!--
         告诉 Spring 创建对象
-        声明 bean：就是高数Spring 要创建某个类的对象
+        声明 bean：就是告诉Spring 要创建某个类的对象
         id：对象的自定义名称，唯一只。Spring通过这个名称找到对象
         class：类的全限定名称
 -->
@@ -37,19 +37,53 @@
                     index：位置
                     value：简单类型用value
                     ref：如果是引用类型就用 ref
+        3. 自动注入：spring 框架里面可以根据某种方式来给引用类型赋值（基本类型不行）
+            1. byName：java 类中引用类型的属性名和spring 容器中（配置文件）<bean> 的id一样
+                       并且数据类型一致，这样容器中的类型能够赋值给引用类型
+               语法：<bean id="xx" class="yy" autowire="byName">
+                        简单类型赋值
+                    </bean>
+               实质是比较的set方法后面的名字
+            2. byType：按类型注入 java类中的数据类型和spring中声明 的bean 的class属性是同源关系的
+                       这样的bean 能够赋值给引用类型
+                   同源就是同一类的意思：
+                    1. java 类中引用类型的数据类型和 class 的值是一样的
+                    2. java 类中引用类型的数据类型和 class 的值的父子类关系的
+                    3. 接口和实现类关系的
+                    有多个能够匹配的bean 会抛出异常
+         4. 多配置文件
+            1. 每个文件的大小比一个文件要小很多。效率高
+            2. 避免多人竞争带来的冲突
+
+            如果有多个模块，一个模块一个配置文件
+            能够使用 通配符 但是不能包含自己
+            <import resource="classpath:../../../..xml">
+         5. 基于注解的 di ：
+            1. 加入maven的依赖 spring-context
+            2. 在类中加入 spring 的注解
+            3. 在 spring 的配置文件中，加入一个注解扫描器的标签，说明注解在你的项目中的位置
+
+            1. @Component
+            2. @Repository
+            3. @Service
+            4. @Controller
+            5. @Value
+            6. @Autowired
+            7. @Resource
+
 -->
-    <bean id="myUser" class="com.lcx.service.User">
+    <bean id="myUser" class="com.lcx.pa1.User">
         <property name="name" value="lisi"/>
         <property name="psw" value="123"/>
     </bean>
-    <bean id="myStudent" class="com.lcx.service.Student">
+    <bean id="myStudent" class="com.lcx.pa1.Student">
         <property name="name" value="wangwu"/>
         <property name="age" value="18"/>
     </bean>
-    <bean id="mySchool" class="com.lcx.service.School">
+    <bean id="mySchool" class="com.lcx.pa1.School">
         <property name="student" ref="myStudent"/>
     </bean>
-    <bean id="myUser2" class="com.lcx.service.User">
+    <bean id="myUser2" class="com.lcx.pa1.User">
         <constructor-arg name="name" value="张三"/>
         <constructor-arg name="psw" value="123"/>
     </bean>

@@ -14,6 +14,7 @@
         <module name="01-Spring_start" />
         <module name="03-Spring" />
         <module name="06-Spring-mybatis" />
+        <module name="Spring-Web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -26,6 +27,7 @@
       <module name="07-Spring+Mybatis" target="1.8" />
       <module name="08-Spring-annotation" target="1.8" />
       <module name="Spring-Anno" target="1.8" />
+      <module name="Spring-Web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

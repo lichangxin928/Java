@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/08-Spring-annotation/08-Spring-annotation.iml" filepath="$PROJECT_DIR$/08-Spring-annotation/08-Spring-annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Spring.iml" filepath="$PROJECT_DIR$/.idea/Spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring-Anno/Spring-Anno.iml" filepath="$PROJECT_DIR$/Spring-Anno/Spring-Anno.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring-Web/Spring-Web.iml" filepath="$PROJECT_DIR$/Spring-Web/Spring-Web.iml" />
     </modules>
   </component>
 </project>

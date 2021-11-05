@@ -4,6 +4,9 @@
     <option name="archetypesFileLocation" value="archetypes.xml" />
     <option name="workingDirectory" value="" />
   </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/Spring-Web" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -16,6 +19,7 @@
         <option value="$PROJECT_DIR$/07-Spring+Mybatis/pom.xml" />
         <option value="$PROJECT_DIR$/08-Spring-annotation/pom.xml" />
         <option value="$PROJECT_DIR$/Spring-Anno/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-Web/pom.xml" />
       </list>
     </option>
   </component>

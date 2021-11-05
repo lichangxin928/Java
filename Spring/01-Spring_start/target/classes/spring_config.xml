@@ -14,7 +14,7 @@
         spring 是把创建好的对象放入到map中，spring 框架有一个map存放对象的
         springMap.put(id,Object)
 -->
-    <bean id="someService" class="com.lcx.service.SomeServiceImpl"></bean>
+    <bean id="someService" class="com.lcx.pa1.Student"></bean>
     <bean id="date" class="java.util.Date"></bean>
 </beans>
 <!--
