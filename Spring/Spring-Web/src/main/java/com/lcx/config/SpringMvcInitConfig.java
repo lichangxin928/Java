@@ -1,5 +1,6 @@
 package com.lcx.config;
 
+import com.lcx.filters.CrossOriginFilter.CrossOriginFilter;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.filter.CharacterEncodingFilter;
@@ -26,6 +27,12 @@ public class SpringMvcInitConfig extends AbstractDispatcherServletInitializer {
         // 添加到容器中（不是ioc 容器，而是 ServletContainer）
         FilterRegistration.Dynamic registration = servletContext.addFilter("characterEncoding", characterEncodingFilter);
         // 添加映射
+        registration.addMappingForUrlPatterns(EnumSet.of(DispatcherType.REQUEST,
+                DispatcherType.FORWARD,
+                INCLUDE),false,"/");
+
+        // 解决跨域问题的过滤器
+        FilterRegistration.Dynamic registration1 = servletContext.addFilter("crossOriginFilter", new CrossOriginFilter());
         registration.addMappingForUrlPatterns(EnumSet.of(DispatcherType.REQUEST,
                 DispatcherType.FORWARD,
                 INCLUDE),false,"/");
