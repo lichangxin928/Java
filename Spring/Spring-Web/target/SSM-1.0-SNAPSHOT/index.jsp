@@ -84,7 +84,6 @@ ExceptionHandler注解的使用
             $.ajax({
                 url:"useRequestBody",
                 type:"post",
-                // data:"username=test&age=18&gender=male",
                 data:'{"name":"test","age":25,"id":"1"}',//json
                 contentType:"application/json",
                 dataType:"text",

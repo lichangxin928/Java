@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="02-Spring" />
+        <module name="Spring-annot" />
         <module name="05-Spring-aop-aspectJ" />
         <module name="07-Spring+Mybatis" />
         <module name="08-Spring-annotation" />
@@ -27,6 +28,7 @@
       <module name="07-Spring+Mybatis" target="1.8" />
       <module name="08-Spring-annotation" target="1.8" />
       <module name="Spring-Anno" target="1.8" />
+      <module name="Spring-annot" target="1.8" />
       <module name="Spring-Web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
