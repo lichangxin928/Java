@@ -21,7 +21,6 @@ public class JdbcConfig {
     @Bean("dataSource")
     public DataSource dataSource(){
         DruidDataSource dataSource = new DruidDataSource();
-        dataSource.setDriverClassName(driverClass);
         dataSource.setUrl(jdbcUrl);
         dataSource.setUsername(username);
         dataSource.setPassword(psw);

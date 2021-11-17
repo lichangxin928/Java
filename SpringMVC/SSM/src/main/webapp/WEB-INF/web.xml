@@ -17,7 +17,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>MyWeb</servlet-name>
-        <url-pattern>*.do</url-pattern>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
 
     <!--spring的上下文-->

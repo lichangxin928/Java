@@ -1,5 +1,8 @@
 package com.lcx.domain;
 
+import com.baomidou.mybatisplus.annotation.TableName;
+
+@TableName("student")
 public class Student {
     private Integer id;
     private String name;

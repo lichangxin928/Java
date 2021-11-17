@@ -17,8 +17,8 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry){
-        registry.addResourceHandler("/js/**","/images/**","/css/**")
-                .addResourceLocations("/js/","/images/","/css/")
+        registry.addResourceHandler("/js/**","/images/**","/css/**","/html/**")
+                .addResourceLocations("/js/","/images/","/css/","/html/")
                 .resourceChain(true)
                 .addResolver(new VersionResourceResolver().addContentVersionStrategy("/**"));
     }
@@ -30,7 +30,7 @@ public class WebConfig implements WebMvcConfigurer {
     public ViewResolver createViewResolver(){
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
         viewResolver.setPrefix("/WEB-INF/pages/");
-        viewResolver.setSuffix(".jsp");
+        viewResolver.setSuffix(".html");
         return viewResolver;
     }
 }

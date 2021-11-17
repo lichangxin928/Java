@@ -3,13 +3,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
-<!--    spring 配置文件 声明 Service dao util-->
+    <!--    spring 配置文件 声明 Service dao util-->
 
-<!--    声明数据源，连接数据库-->
+    <!--    声明数据源，连接数据库-->
     <context:property-placeholder location="classpath:config/jdbc.properties"/>
 
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
-        <property name="url" value="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ${jdbc.url}"/>
+        <property name="url" value="${jdbc.url}"/>
         <property name="username" value="${jdbc.username}"/>
         <property name="password" value="${jdbc.psw}"/>
     </bean>
@@ -20,14 +20,14 @@
 
     </bean>
 
-<!--    声明 mybatis 扫描器-->
+    <!--    声明 mybatis 扫描器-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
         <property name="basePackage" value="ssm.lcx.dao"/>
     </bean>
-<!--    Service 所在位置-->
+    <!--    Service 所在位置-->
     <context:component-scan base-package="ssm.lcx.service"/>
 
-<!--    事务配置：注解的配置，aspect 的配置-->
+    <!--    事务配置：注解的配置，aspect 的配置-->
 
 </beans>

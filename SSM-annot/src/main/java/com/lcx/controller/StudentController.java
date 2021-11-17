@@ -5,6 +5,7 @@ import com.lcx.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -17,7 +18,18 @@ public class StudentController {
     public String findAll(){
         List<Student> all = studentService.findAll();
         System.out.println(all);
-        System.out.println("mode");
         return "success";
+    }
+
+    @RequestMapping("/studentListPage")
+    public String studentListPage(){
+        return "redirect:/studentList";
+    }
+
+    @ResponseBody
+    @RequestMapping("/studentList")
+    public List<Student> getStudentList(){
+        List<Student> all = studentService.findAll();
+        return all;
     }
 }
