@@ -25,11 +25,5 @@ public class SpringConfig {
         sqlSessionFactoryBean.setDataSource(dataSource);
         return sqlSessionFactoryBean;
     }
-//
-//    @Bean("mybatisSqlSessionFactory")
-//    public MybatisSqlSessionFactoryBean MybatisSqlSessionFactoryBean(DataSource dataSource){
-//        MybatisSqlSessionFactoryBean sqlSessionFactoryBean = new MybatisSqlSessionFactoryBean();
-//        sqlSessionFactoryBean.setDataSource(dataSource);
-//        return sqlSessionFactoryBean;
-//    }
+
 }

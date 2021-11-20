@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="springboot-03-mybatis" />
+        <module name="springboot-04-mybatisplus" />
+        <module name="springboot-01-quickstart" />
+        <module name="springboot-06-ssm" />
+        <module name="springboot-02-config" />
+        <module name="springboot-05-druid" />
+        <module name="springboot-04-mybatis" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="springboot-01-quickstart" target="1.8" />
+      <module name="springboot-02-config" target="1.8" />
+      <module name="springboot-03-junit" target="1.8" />
+      <module name="springboot-03-mybatis" target="1.8" />
+      <module name="springboot-03-ssm" target="1.8" />
+      <module name="springboot-04-mybatis" target="1.8" />
+      <module name="springboot-04-mybatisplus" target="1.8" />
+      <module name="springboot-05-druid" target="1.8" />
+      <module name="springboot-06-ssm" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="springboot-01-quickstart" options="-parameters" />
+      <module name="springboot-03-mybatis" options="-parameters" />
+      <module name="springboot-04-mybatis" options="-parameters" />
+      <module name="springboot-04-mybatisplus" options="-parameters" />
+      <module name="springboot-05-druid" options="-parameters" />
+      <module name="springboot-06-ssm" options="-parameters" />
+    </option>
+  </component>
+</project>

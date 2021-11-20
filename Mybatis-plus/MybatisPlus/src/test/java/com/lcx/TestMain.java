@@ -1,5 +1,7 @@
 package com.lcx;
 import com.baomidou.mybatisplus.core.MybatisSqlSessionFactoryBuilder;
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.lcx.dao.StudentDao;
 import com.lcx.domain.Student;
 import org.apache.ibatis.io.Resources;
@@ -21,6 +23,8 @@ public class TestMain {
         SqlSession sqlSession = sqlSessionFactory.openSession();
         StudentDao mapper = sqlSession.getMapper(StudentDao.class);
 
+        Student student1 = new Student();
+        QueryWrapper<Student> wrapper = new QueryWrapper<>(student1);
         List<Student> students = mapper.selectList(null);
         for (Student student : students) {
             System.out.println(student);
