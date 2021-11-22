@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/springboot-04-mybatisplus/springboot-04-mybatisplus.iml" filepath="$PROJECT_DIR$/springboot-04-mybatisplus/springboot-04-mybatisplus.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-05-druid/springboot-05-druid.iml" filepath="$PROJECT_DIR$/springboot-05-druid/springboot-05-druid.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-06-ssm/springboot-06-ssm.iml" filepath="$PROJECT_DIR$/springboot-06-ssm/springboot-06-ssm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-07-web/springboot-07-web.iml" filepath="$PROJECT_DIR$/springboot-07-web/springboot-07-web.iml" />
     </modules>
   </component>
 </project>

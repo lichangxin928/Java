@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springboot-03-mybatis" />
         <module name="springboot-04-mybatisplus" />
+        <module name="springboot-07-web" />
         <module name="springboot-01-quickstart" />
         <module name="springboot-06-ssm" />
         <module name="springboot-02-config" />
@@ -26,6 +27,7 @@
       <module name="springboot-04-mybatisplus" target="1.8" />
       <module name="springboot-05-druid" target="1.8" />
       <module name="springboot-06-ssm" target="1.8" />
+      <module name="springboot-07-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

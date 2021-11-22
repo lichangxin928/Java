@@ -1,0 +1,11 @@
+server:
+  port: 80
+spring:
+  cache:
+    jcache:
+      provider:
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+

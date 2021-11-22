@@ -314,6 +314,436 @@ public interface StudentDao extends BaseMapper<Student> {
 
 ## 四、SSM整合案例(crud)
 
+1. pom.xml：配置起步依赖
+2. application.yml：设置数据源、端口、框架技术相关配置
+3. dao：基础BaseMapper、设置@Mapper
+4. dao测试类
+5. service：调用数据层接口或 MyBatis-plus 提供的接口快速开发
+6. service 测试类
+7. controller：基于Restful开发，使用Postman测试跑通功能
+8. 页面：放置在 resources 目录下的static目录中
+
+# 五、Web 开发
+
+## 5.1 简单功能分析
+### 5.1.1 静态资源访问
+#### **1. 静态资源目录**
+
+    只要放在类路径下：called /static(or /public or /resources or /META-INF/resources)
+    访问当前项目路径/ + 静态资源名，只需要写静态资源名就能访问，springboot
+
+原理：/**
+收到请求后先去匹配 controller，如果不能处理就去交给静态资源处理器。
+
+**改变默认的静态资源位置**
+```yaml
+  web:
+    resources:
+      static-locations: classpath:/path
+```
+
+#### **2. 静态资源访问前缀**
+```yaml
+spring:
+  mvc:
+    static-path-pattern: /res/**
+```
+当前项目 + static-path-pattern + 静态资源名 = 静态资源文件夹下的
+
+### 5.1.2 欢迎页支持
+#### **1. 自动加载的欢迎页面**
+1. 在静态资料路径下 index.html
+   1. 可以配置静态资源路径
+   2. 但是不可以配置静态资源的访问前缀。否则导致index.html 不能被默认访问
+2. controller 能够处理 /index 请求的controller 自动会请求
+
+#### **2. favicon支持**
+将 favicon.ico 放置在静态资源路径下，会自动将favicon.ico 作为页面小图标
+
+### 5.1.3 静态资源配置原理
+#### 加载配置类源码
+1. springboot启动默认加载 XXXAutoConfiguration类（自动配置类）
+2. SpringMVC功能的自动配置类是 WebMvcAutoConfiguration
+```java
+@Configuration(
+    proxyBeanMethods = false
+)
+@ConditionalOnWebApplication(
+    type = Type.SERVLET
+)
+@ConditionalOnClass({Servlet.class, DispatcherServlet.class, WebMvcConfigurer.class})
+@ConditionalOnMissingBean({WebMvcConfigurationSupport.class})
+@AutoConfigureOrder(-2147483638)
+@AutoConfigureAfter({DispatcherServletAutoConfiguration.class, TaskExecutionAutoConfiguration.class, ValidationAutoConfiguration.class})
+public class WebMvcAutoConfiguration {}
+```
+#### 配置类生效源码
+```java
+@Configuration(
+        proxyBeanMethods = false
+    )
+    @Import({WebMvcAutoConfiguration.EnableWebMvcConfiguration.class})
+    @EnableConfigurationProperties({WebMvcProperties.class, ResourceProperties.class, WebProperties.class})
+    @Order(0)
+    public static class WebMvcAutoConfigurationAdapter implements WebMvcConfigurer, ServletContextAware {}
+```
+配置文件的相关属性和什么进行了绑定
+
+如果配置中只有一个有参构造器，那么属性会自动从容器中找
+```java
+// ResourceProperties 获取 spring.resources
+// WebMvcProperties 获取 sprint.mvc
+// ListableBeanFactory 获取bean 工厂
+// ResourceHandlerRegistrationCustomizer 获取资源处理自定义器
+// ...
+        public WebMvcAutoConfigurationAdapter(ResourceProperties resourceProperties, WebProperties webProperties, WebMvcProperties mvcProperties, ListableBeanFactory beanFactory, ObjectProvider<HttpMessageConverters> messageConvertersProvider, ObjectProvider<WebMvcAutoConfiguration.ResourceHandlerRegistrationCustomizer> resourceHandlerRegistrationCustomizerProvider, ObjectProvider<DispatcherServletPath> dispatcherServletPath, ObjectProvider<ServletRegistrationBean<?>> servletRegistrations) {
+            this.resourceProperties = (Resources)(resourceProperties.hasBeenCustomized() ? resourceProperties : webProperties.getResources());
+            this.mvcProperties = mvcProperties;
+            this.beanFactory = beanFactory;
+            this.messageConvertersProvider = messageConvertersProvider;
+            this.resourceHandlerRegistrationCustomizer = (WebMvcAutoConfiguration.ResourceHandlerRegistrationCustomizer)resourceHandlerRegistrationCustomizerProvider.getIfAvailable();
+            this.dispatcherServletPath = dispatcherServletPath;
+            this.servletRegistrations = servletRegistrations;
+            this.mvcProperties.checkConfiguration();
+        }
+```
+
+#### **资源处理的默认规则源码**
+```java
+public void addResourceHandlers(ResourceHandlerRegistry registry) {
+            if (!this.resourceProperties.isAddMappings()) {
+                logger.debug("Default resource handling disabled");
+            } else {
+                Duration cachePeriod = this.resourceProperties.getCache().getPeriod();
+                CacheControl cacheControl = this.resourceProperties.getCache().getCachecontrol().toHttpCacheControl();
+                if (!registry.hasMappingForPattern("/webjars/**")) {
+                    this.customizeResourceHandlerRegistration(registry.addResourceHandler(new String[]{"/webjars/**"}).addResourceLocations(new String[]{"classpath:/META-INF/resources/webjars/"}).setCachePeriod(this.getSeconds(cachePeriod)).setCacheControl(cacheControl));
+                }
+
+                String staticPathPattern = this.mvcProperties.getStaticPathPattern();
+                if (!registry.hasMappingForPattern(staticPathPattern)) {
+                    this.customizeResourceHandlerRegistration(registry.addResourceHandler(new String[]{staticPathPattern}).addResourceLocations(WebMvcAutoConfiguration.getResourceLocations(this.resourceProperties.getStaticLocations())).setCachePeriod(this.getSeconds(cachePeriod)).setCacheControl(cacheControl));
+                }
+
+            }
+        }
+```
+
+#### 可以直接禁用所有静态资源
+```yaml
+spring:
+  web:
+    resources:
+      add-mappings: false
+```
+
+#### **默认资源配置源码**
+```java
+private static final String[] CLASSPATH_RESOURCE_LOCATIONS = new String[]{"classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/"};
+    private String[] staticLocations;
+    private boolean addMappings;
+    private final ResourceProperties.Chain chain;
+    private final ResourceProperties.Cache cache;
+```
+
+#### **欢迎页源码**
+```java
+@Bean
+public WelcomePageHandlerMapping welcomePageHandlerMapping(ApplicationContext applicationContext, FormattingConversionService mvcConversionService, ResourceUrlProvider mvcResourceUrlProvider) {
+    WelcomePageHandlerMapping welcomePageHandlerMapping = new WelcomePageHandlerMapping(new TemplateAvailabilityProviders(applicationContext), applicationContext, this.getWelcomePage(), this.mvcProperties.getStaticPathPattern());
+    welcomePageHandlerMapping.setInterceptors(this.getInterceptors(mvcConversionService, mvcResourceUrlProvider));
+    welcomePageHandlerMapping.setCorsConfigurations(this.getCorsConfigurations());
+    return welcomePageHandlerMapping;
+}
+
+WelcomePageHandlerMapping(TemplateAvailabilityProviders templateAvailabilityProviders, ApplicationContext applicationContext, Resource welcomePage, String staticPathPattern) {
+    if (welcomePage != null && "/**".equals(staticPathPattern)) {
+        logger.info("Adding welcome page: " + welcomePage);
+        this.setRootViewName("forward:index.html");
+    } 
+    else if (this.welcomeTemplateExists(templateAvailabilityProviders, applicationContext)) {
+        logger.info("Adding welcome page template: index");
+        this.setRootViewName("index");
+    }
+
+}
+
+```
 
 
+### 5.2.1 请求参数处理
+#### 请求映射
+1. xxxMapping
+2. Rest 风格（使用Http请求的方式动词来表示对资源的操作）
+   1. 以前：/getUser 获取用户  /deleteUser 删除用户 /editUser 修改用户 /saveUser 保存用户
+   2. 现在：/user get获取     Delete 删除用户      PUT 修改用户    POST 保存用户
+3. 核心 Filter HiddenHttpMethodFilter
+
+开启这个过滤器
+```yaml
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+```
+Rest原理
+1. 表单提交的时候会带上_method=PUT
+2. 请求过来呗HidderHttpMethodFilter拦截
+   1. 请求是否正常，并且判断是否是 POST
+      1. 获取到_method 属性的值
+      2. 兼容以下请求，PUT DELETE PATCH
+      3. 原生request包装模式 requestWrapper重写了getMethod 方法
+      4. 过滤器使用 wrapper。以后的方法调用getMethod是调用requestWrapper的
+
+```java
+protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+        HttpServletRequest requestToUse = request;
+        if ("POST".equals(request.getMethod()) && request.getAttribute("javax.servlet.error.exception") == null) {
+            String paramValue = request.getParameter(this.methodParam);
+            if (StringUtils.hasLength(paramValue)) {
+                String method = paramValue.toUpperCase(Locale.ENGLISH);
+                if (ALLOWED_METHODS.contains(method)) {
+                    requestToUse = new HiddenHttpMethodFilter.HttpMethodRequestWrapper(request, method);
+                }
+            }
+        }
+```
+
+### 5.2.2 请求映射处理
+
+> 继承树结构：DispatcherServlet 继承 FrameworkServlet 继承 HttpServletBean 继承 HttpServlet
+
+**FrameworkServlet中重写的doGet和doPost方法等等**
+```java
+    protected final void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        this.processRequest(request, response);
+    }
+
+    protected final void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        this.processRequest(request, response);
+    }
+
+    protected final void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        this.processRequest(request, response);
+    }
+
+    protected final void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        this.processRequest(request, response);
+    }
+
+```
+
+**进入到 processRequest方法中**
+```java
+protected final void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // 初始化的过程
+        long startTime = System.currentTimeMillis();
+        Throwable failureCause = null;
+        LocaleContext previousLocaleContext = LocaleContextHolder.getLocaleContext();
+        LocaleContext localeContext = this.buildLocaleContext(request);
+        RequestAttributes previousAttributes = RequestContextHolder.getRequestAttributes();
+        ServletRequestAttributes requestAttributes = this.buildRequestAttributes(request, response, previousAttributes);
+        WebAsyncManager asyncManager = WebAsyncUtils.getAsyncManager(request);
+        asyncManager.registerCallableInterceptor(FrameworkServlet.class.getName(), new FrameworkServlet.RequestBindingInterceptor());
+        this.initContextHolders(request, localeContext, requestAttributes);
+
+        try {
+            // 执行核心方法 doService
+            this.doService(request, response);
+        } catch (IOException | ServletException var16) {
+            failureCause = var16;
+            throw var16;
+        } catch (Throwable var17) {
+            failureCause = var17;
+            throw new NestedServletException("Request processing failed", var17);
+        } finally {
+            this.resetContextHolders(request, previousLocaleContext, previousAttributes);
+            if (requestAttributes != null) {
+                requestAttributes.requestCompleted();
+            }
+
+            this.logResult(request, response, (Throwable)failureCause, asyncManager);
+            this.publishRequestHandledEvent(request, response, startTime, (Throwable)failureCause);
+        }
+
+    }
+```
+
+**查看这个doService方法，发现是一个抽血方法， 下层来实现的**
+```java
+protected abstract void doService(HttpServletRequest var1, HttpServletResponse var2) throws Exception;
+```
+
+**于是我们来到了DispatcherServlet这个类中，果然发现了doService的实现方法**
+
+```java
+    protected void doService(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        this.logRequest(request);
+        Map<String, Object> attributesSnapshot = null;
+        if (WebUtils.isIncludeRequest(request)) {
+            attributesSnapshot = new HashMap();
+            Enumeration attrNames = request.getAttributeNames();
+
+            label95:
+            while(true) {
+                String attrName;
+                do {
+                    if (!attrNames.hasMoreElements()) {
+                        break label95;
+                    }
+
+                    attrName = (String)attrNames.nextElement();
+                } while(!this.cleanupAfterInclude && !attrName.startsWith("org.springframework.web.servlet"));
+
+                attributesSnapshot.put(attrName, request.getAttribute(attrName));
+            }
+        }
+
+        request.setAttribute(WEB_APPLICATION_CONTEXT_ATTRIBUTE, this.getWebApplicationContext());
+        request.setAttribute(LOCALE_RESOLVER_ATTRIBUTE, this.localeResolver);
+        request.setAttribute(THEME_RESOLVER_ATTRIBUTE, this.themeResolver);
+        request.setAttribute(THEME_SOURCE_ATTRIBUTE, this.getThemeSource());
+        if (this.flashMapManager != null) {
+            FlashMap inputFlashMap = this.flashMapManager.retrieveAndUpdate(request, response);
+            if (inputFlashMap != null) {
+                request.setAttribute(INPUT_FLASH_MAP_ATTRIBUTE, Collections.unmodifiableMap(inputFlashMap));
+            }
+
+            request.setAttribute(OUTPUT_FLASH_MAP_ATTRIBUTE, new FlashMap());
+            request.setAttribute(FLASH_MAP_MANAGER_ATTRIBUTE, this.flashMapManager);
+        }
+
+        // 上面的代码都是在进行初始化操作
+        
+        try {
+            // 最终执行了这个方法
+            this.doDispatch(request, response);
+        } finally {
+            if (!WebAsyncUtils.getAsyncManager(request).isConcurrentHandlingStarted() && attributesSnapshot != null) {
+                this.restoreAttributesAfterInclude(request, attributesSnapshot);
+            }
+
+        }
+
+    }
+```
+
+**通过DispatcherServlet中重写的doService方法，我们可以看出是调用了doDispatch这个方法**
+
+**每一个请求进来都会调动这个方法**
+
+```java
+    protected void doDispatch(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        // 封装一下Request请求
+        HttpServletRequest processedRequest = request;
+        // 初始化HandlerExecutionChain
+        HandlerExecutionChain mappedHandler = null;
+        boolean multipartRequestParsed = false;
+
+        WebAsyncManager asyncManager = WebAsyncUtils.getAsyncManager(request);
+
+        try {
+            ModelAndView mv = null;
+            Exception dispatchException = null;
+
+            try {
+                // 检查是否文件上传
+                processedRequest = checkMultipart(request);
+                multipartRequestParsed = (processedRequest != request);
+                // 寻找到Request对应哪一个Hander（controller）方法
+                mappedHandler = getHandler(processedRequest);
+                if (mappedHandler == null) {
+                    noHandlerFound(processedRequest, response);
+                    return;
+                }
+
+                // Determine handler adapter for the current request.
+                HandlerAdapter ha = getHandlerAdapter(mappedHandler.getHandler());
+
+                // Process last-modified header, if supported by the handler.
+                String method = request.getMethod();
+                boolean isGet = "GET".equals(method);
+                if (isGet || "HEAD".equals(method)) {
+                    long lastModified = ha.getLastModified(request, mappedHandler.getHandler());
+                    if (new ServletWebRequest(request, response).checkNotModified(lastModified) && isGet) {
+                        return;
+                    }
+                }
+
+                if (!mappedHandler.applyPreHandle(processedRequest, response)) {
+                    return;
+                }
+
+                // Actually invoke the handler.
+                mv = ha.handle(processedRequest, response, mappedHandler.getHandler());
+
+                if (asyncManager.isConcurrentHandlingStarted()) {
+                    return;
+                }
+
+                applyDefaultViewName(processedRequest, mv);
+                mappedHandler.applyPostHandle(processedRequest, response, mv);
+            }
+            catch (Exception ex) {
+                dispatchException = ex;
+            }
+            catch (Throwable err) {
+                // As of 4.3, we're processing Errors thrown from handler methods as well,
+                // making them available for @ExceptionHandler methods and other scenarios.
+                dispatchException = new NestedServletException("Handler dispatch failed", err);
+            }
+            processDispatchResult(processedRequest, response, mappedHandler, mv, dispatchException);
+        }
+        catch (Exception ex) {
+            triggerAfterCompletion(processedRequest, response, mappedHandler, ex);
+        }
+        catch (Throwable err) {
+            triggerAfterCompletion(processedRequest, response, mappedHandler,
+                    new NestedServletException("Handler processing failed", err));
+        }
+        finally {
+            if (asyncManager.isConcurrentHandlingStarted()) {
+                // Instead of postHandle and afterCompletion
+                if (mappedHandler != null) {
+                    mappedHandler.applyAfterConcurrentHandlingStarted(processedRequest, response);
+                }
+            }
+            else {
+                // Clean up any resources used by a multipart request.
+                if (multipartRequestParsed) {
+                    cleanupMultipart(processedRequest);
+                }
+            }
+        }
+    }
+```
+
+**寻找handlerMappings的方法**
+
+```java
+	@Nullable
+	protected HandlerExecutionChain getHandler(HttpServletRequest request) throws Exception {
+		if (this.handlerMappings != null) {
+			for (HandlerMapping mapping : this.handlerMappings) {
+				HandlerExecutionChain handler = mapping.getHandler(request);
+				if (handler != null) {
+					return handler;
+				}
+			}
+		}
+		return null;
+	}
+```
+**通过调试发现此方法中的handlerMappings里面就包括了所有的controller，并且还有一个默认的欢迎页，WelcomePage的handler**
+**这也解释了默认情况下的WelcomePage**
+
+
+**所有的请求映射都在HandlerMapping中**
+
+- springboot自动配置欢迎页的HandlerMapping，访问/能访问到index.html
+- springboot自动配置了RequestMappingHandlerMapping
+- 请求进来，挨个尝试所有的HandlerMapping看是否有请求
+  - 如果有，就找到这个请求的Hander
+  - 如果没有，就继续找
+- 需要一些自定义的映射处理，我们也可以自己给容器中放HandlerMapping
 
