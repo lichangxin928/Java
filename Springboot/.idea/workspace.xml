@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2d06371a-f218-41cd-82ab-ce30f47a13f3" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_4_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-01-quickstart/springboot-01-quickstart.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-02-config/springboot-02-config.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-03-mybatis/springboot-03-mybatis.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-04-mybatisplus/springboot-04-mybatisplus.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-05-druid/springboot-05-druid.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-06-ssm/springboot-06-ssm.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-07-web/springboot-07-web.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-07-web/src/main/java/com/lcx/config/MPConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-07-web/src/main/java/com/lcx/controller/ResponseTestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-07-web/src/main/java/com/lcx/dao/StudentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-07-web/src/main/java/com/lcx/domain/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-07-web/src/main/java/com/lcx/service/StudentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-07-web/src/main/java/com/lcx/service/impl/StudentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVC/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringMVC/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-07-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-07-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-07-web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-07-web/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/src/com/lichangxin/CAS/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Thread/src/com/lichangxin/CAS/Test1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/src/com/lichangxin/CAS/Test2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Thread/src/com/lichangxin/CAS/Test2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/src/com/lichangxin/ThreadPool/poolshixian.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Thread/src/com/lichangxin/ThreadPool/poolshixian.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/src/com/lichangxin/base/p1/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Thread/src/com/lichangxin/base/p1/Test.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="C:\Users\24314\.m2\repository" />
+        <option name="userSettingsFile" value="D:\develop\apache-maven-3.6.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="21JQoORK6sebEi0oS3KfySxe4eZ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showModules" value="false" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/springboot-07-web/src/main/java/com/lcx" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="模块" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\code\Java\Springboot\springboot-07-web\src\main\java\com\lcx" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.WebApplication">
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot-02-config" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lcx.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SSMPApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot-06-ssm" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lcx.SSMPApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Springboot01QuickstartApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot-01-quickstart" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lcx.Springboot01QuickstartApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Springboot03MybatisApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot-03-mybatis" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lcx.Springboot03MybatisApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Springboot04MybatisplusApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot-04-mybatisplus" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lcx.Springboot04MybatisplusApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Springboot05DruidApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot-05-druid" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.Springboot05DruidApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot-07-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lcx.WebApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="2d06371a-f218-41cd-82ab-ce30f47a13f3" name="更改" comment="" />
+      <created>1637656884560</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1637656884560</updated>
+      <workItem from="1637656885853" duration="789000" />
+      <workItem from="1637657870964" duration="1984000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

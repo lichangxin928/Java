@@ -39,7 +39,7 @@ public class Test2 {
     }
 }
 class Indicator{
-    // 单例
+    // 单例 饿汉式
     private Indicator(){};
     // 定义一个私有的本类静态对象
     private static final Indicator INDICATOR = new Indicator();

@@ -30,11 +30,13 @@ class CASCounter{
     }
 
     private boolean compareAndSwap(long expectionValue,long newValue){
+        // 加锁防止此方法在执行过程中被其他线程调用
         synchronized (this){
             if(value == expectionValue){
                 value = newValue;
                 return true;
             }else{
+                System.out.println("不符合预期");
                 return  false;
             }
         }

@@ -1,0 +1,7 @@
+datasource:
+  driver: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost/test
+  username: root
+  password: 123
+
+country: china

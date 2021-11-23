@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>welcome</title>
+</head>
+<body>
+<h1>welcome</h1>
+<form action="/user" method="get">
+    <input type="submit" value="get">
+</form>
+<form action="/user" method="post">
+    <input type="submit" value="post" >
+</form>
+<form action="/user" method="post">
+    <input name="_method" value="put" style="display: none;"/>
+    <input type="submit" value="put">
+</form>
+<form action="/user" method="post">
+    <input name="_method" value="delete" style="display: none;"/>
+    <input type="submit" value="delete">
+</form>
+
+
+<a href="/car/2/lisi?age=1&inter=basketball">pathVariable</a>
+</body>
+</html>
