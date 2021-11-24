@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文件上传</title>
+</head>
+<body>
+
+    <form method="post" action="/upload" enctype="multipart/form-data">
+        <label>单文件</label>
+        <input type="file" name="signalFile">
+        <label>多文件</label>
+        <input type="file" multiple name="multipleFile">
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>

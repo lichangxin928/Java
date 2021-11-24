@@ -5,24 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d06371a-f218-41cd-82ab-ce30f47a13f3" name="更改" comment="springboot">
-      <change afterPath="$PROJECT_DIR$/springboot-08-thymeleaf/springboot-08-thymeleaf.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-09-web-admin/springboot-09-web-admin.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-09-web-admin/src/main/java/com/lcx/config/AdminWebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-09-web-admin/src/main/java/com/lcx/controller/TableController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-09-web-admin/src/main/java/com/lcx/domain/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-09-web-admin/src/main/java/com/lcx/interceptor/LoginInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-09-web-admin/src/main/resources/templates/common.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-09-web-admin/src/main/resources/templates/table/basic_table.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-09-web-admin/src/main/resources/templates/table/dynamic_table.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-09-web-admin/src/main/resources/templates/table/editable_table.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-09-web-admin/src/main/resources/templates/table/responsive_table.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-09-web-admin/src/main/resources/templates/error/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-09-web-admin/src/main/resources/templates/error/500.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-09-web-admin/src/main/resources/templates/file.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-09-web-admin/src/main/java/com/lcx/config/AdminWebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-09-web-admin/src/main/java/com/lcx/config/AdminWebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot-09-web-admin/src/main/java/com/lcx/controller/indexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-09-web-admin/src/main/java/com/lcx/controller/indexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-09-web-admin/src/main/java/com/lcx/interceptor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-09-web-admin/src/main/java/com/lcx/interceptor/LoginInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot-09-web-admin/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-09-web-admin/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-09-web-admin/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-09-web-admin/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot-09-web-admin/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-09-web-admin/src/main/resources/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebDemo/src/main/java/com/example/filter/Anote.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WebDemo/src/main/java/com/example/filter/Anote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-09-web-admin/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-09-web-admin/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-09-web-admin/target/classes/com/lcx/controller/indexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-09-web-admin/target/classes/com/lcx/controller/indexController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-09-web-admin/target/classes/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-09-web-admin/target/classes/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-09-web-admin/target/classes/templates/table/dynamic_table.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-09-web-admin/target/classes/templates/table/dynamic_table.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +31,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -75,6 +71,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -84,7 +81,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="corretto-1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/springboot-09-web-admin/src/main/resources/templates/table" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/springboot-09-web-admin/src/main/resources/templates/error" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -93,16 +90,17 @@
     <property name="project.structure.last.edited" value="模块" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\code\Java\Springboot\springboot-09-web-admin\src\main\resources\templates\error" />
       <recent name="C:\code\Java\Springboot\springboot-09-web-admin\src\main\resources\templates\table" />
       <recent name="$PROJECT_DIR$/springboot-09-web-admin/src/main/resources/templates" />
       <recent name="$PROJECT_DIR$/springboot-09-web-admin/src/main/resources/static" />
       <recent name="$PROJECT_DIR$/springboot-08-thymeleaf/src/main/resources" />
-      <recent name="C:\code\Java\Springboot\springboot-07-web\src\main\java\com\lcx" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/springboot-08-thymeleaf/src/main/resources/templates" />
@@ -115,7 +113,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Springboot08ThymeleafApplication">
+  <component name="RunManager" selected="Spring Boot.Springboot09WebAdminApplication">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="springboot-02-config" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.lcx.Application" />
@@ -191,8 +189,16 @@
       <workItem from="1637656885853" duration="789000" />
       <workItem from="1637657870964" duration="1984000" />
       <workItem from="1637732000488" duration="1811000" />
-      <workItem from="1637733874513" duration="5146000" />
+      <workItem from="1637733874513" duration="15210000" />
     </task>
+    <task id="LOCAL-00001" summary="springboot">
+      <created>1637740309889</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1637740309889</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +218,29 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="springboot" />
+    <option name="LAST_COMMIT_MESSAGE" value="springboot" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.12.RELEASE/spring-webmvc-5.2.12.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class</url>
+          <line>470</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.3.2/spring-webmvc-5.3.2.jar!/org/springframework/web/servlet/DispatcherServlet.class</url>
+          <line>501</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="mappedHandler" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Springboot$Springboot02SsmApplicationTests.ic" NAME="Springboot02SsmApplicationTests Coverage Results" MODIFIED="1637395953461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

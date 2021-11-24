@@ -29,6 +29,7 @@ public class LoginInterceptor implements HandlerInterceptor {
             return true;
         }else {
             request.getRequestDispatcher("/").forward(request,response);
+            System.out.println("拦截器");
             return false;
         }
     }
