@@ -5,19 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d06371a-f218-41cd-82ab-ce30f47a13f3" name="更改" comment="springboot">
-      <change afterPath="$PROJECT_DIR$/springboot-09-web-admin/src/main/resources/templates/error/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-09-web-admin/src/main/resources/templates/error/500.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot-09-web-admin/src/main/resources/templates/file.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SSM-annot/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SSM-annot/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SSM-annot/src/main/java/com/lcx/config/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SSM-annot/src/main/java/com/lcx/config/SpringConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-09-web-admin/src/main/java/com/lcx/config/AdminWebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-09-web-admin/src/main/java/com/lcx/config/AdminWebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-09-web-admin/src/main/java/com/lcx/controller/indexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-09-web-admin/src/main/java/com/lcx/controller/indexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-09-web-admin/src/main/java/com/lcx/interceptor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-09-web-admin/src/main/java/com/lcx/interceptor/LoginInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot-09-web-admin/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-09-web-admin/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-09-web-admin/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-09-web-admin/src/main/resources/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-09-web-admin/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-09-web-admin/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-09-web-admin/target/classes/com/lcx/controller/indexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-09-web-admin/target/classes/com/lcx/controller/indexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-09-web-admin/target/classes/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-09-web-admin/target/classes/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-09-web-admin/target/classes/templates/table/dynamic_table.html" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-09-web-admin/target/classes/templates/table/dynamic_table.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +72,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="corretto-1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/springboot-09-web-admin/src/main/resources/templates/error" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -190,6 +181,7 @@
       <workItem from="1637657870964" duration="1984000" />
       <workItem from="1637732000488" duration="1811000" />
       <workItem from="1637733874513" duration="15210000" />
+      <workItem from="1637827871289" duration="4259000" />
     </task>
     <task id="LOCAL-00001" summary="springboot">
       <created>1637740309889</created>
