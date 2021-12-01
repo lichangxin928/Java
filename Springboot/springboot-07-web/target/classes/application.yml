@@ -5,7 +5,7 @@ spring:
     jcache:
       provider:
   mvc:
-    hiddenmethod:
+    hindered:
       filter:
         enabled: true
   datasource:

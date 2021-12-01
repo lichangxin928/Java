@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/springboot-07-web/springboot-07-web.iml" filepath="$PROJECT_DIR$/springboot-07-web/springboot-07-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-08-thymeleaf/springboot-08-thymeleaf.iml" filepath="$PROJECT_DIR$/springboot-08-thymeleaf/springboot-08-thymeleaf.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-09-web-admin/springboot-09-web-admin.iml" filepath="$PROJECT_DIR$/springboot-09-web-admin/springboot-09-web-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-10-demo/springboot-10-demo.iml" filepath="$PROJECT_DIR$/springboot-10-demo/springboot-10-demo.iml" />
     </modules>
   </component>
 </project>

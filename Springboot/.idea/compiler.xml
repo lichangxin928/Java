@@ -16,6 +16,7 @@
         <module name="springboot-02-config" />
         <module name="springboot-05-druid" />
         <module name="springboot-09-web-admin" />
+        <module name="springboot-10-demo" />
         <module name="springboot-04-mybatis" />
       </profile>
     </annotationProcessing>
@@ -32,6 +33,7 @@
       <module name="springboot-07-web" target="1.8" />
       <module name="springboot-08-thymeleaf" target="1.8" />
       <module name="springboot-09-web-admin" target="1.8" />
+      <module name="springboot-10-demo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -42,6 +44,7 @@
       <module name="springboot-04-mybatisplus" options="-parameters" />
       <module name="springboot-05-druid" options="-parameters" />
       <module name="springboot-06-ssm" options="-parameters" />
+      <module name="springboot-10-demo" options="-parameters" />
     </option>
   </component>
 </project>
