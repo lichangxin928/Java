@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!--
+        eureka 包含两个组件，eureka server 和eureka client
+
+        server 提供服务注册服务，各个微服务节点通过配置启动后，会在 eurekaserver中进行注册，这样EurekaServer中的
+        服务支持表中将会存储所有可用服务节点的信息，服务节点的信息可以在界面中直接观看到
+
+        client 通过注册中心进行访问
+
+        是一个java客户端，用于简化eureka server 的交互，客户端同时也具备一个内置的，使用轮询负载算法的负载均衡器
+        在应用启动后，将会想server 发送心跳，如果server 在多个心跳走起内没有接受到某个节点的心跳
+        server 就会从注册表中把这个服务器节点移除
+    -->
+    <parent>
+        <artifactId>cloud-test</artifactId>
+        <groupId>com.lcx</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>clould-eureka-server7002</artifactId>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.lcx</groupId>
+            <artifactId>cloud-api-commons</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+</project>

@@ -2,6 +2,8 @@ package com.lcx.controller;
 
 import com.lcx.domain.Payment;
 import com.lcx.domain.ReturnResult;
+import com.lcx.service.FeignService;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,7 +15,10 @@ import javax.annotation.Resource;
 @RestController
 public class OrderController {
 
-    public static final String PAYMENT_URL = "http://localhost:8001";
+    public static final String PAYMENT_URL = "http://CLOUD-PROVIDER-SERVICE";
+
+    @Resource
+    private FeignService feignService;
 
     @Resource
     public RestTemplate restTemplate;
@@ -26,7 +31,7 @@ public class OrderController {
     @GetMapping("/get/{id}")
     public ReturnResult<Payment> getById(@PathVariable("id") Integer id){
         System.out.println(id);
-        return restTemplate.getForObject(PAYMENT_URL + "/Pay/" + id,ReturnResult.class );
+        return feignService.ById(id);
 
     }
 }

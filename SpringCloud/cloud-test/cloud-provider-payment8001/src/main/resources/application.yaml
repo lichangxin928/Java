@@ -11,3 +11,12 @@ spring:
     username: root
     password: 111
 
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka
+  instance:
+    instance-id: payment8001
+    prefer-ip-address: true
