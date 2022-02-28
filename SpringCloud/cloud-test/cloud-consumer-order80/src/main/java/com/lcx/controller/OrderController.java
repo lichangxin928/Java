@@ -32,6 +32,10 @@ public class OrderController {
     public ReturnResult<Payment> getById(@PathVariable("id") Integer id){
         System.out.println(id);
         return feignService.ById(id);
-
+    }
+    @GetMapping("/consumer/payment/zipkin")
+    public String paymentZipkin(){
+        String result = restTemplate.getForObject(PAYMENT_URL + "/payment/zipkin",String.class);
+        return result;
     }
 }

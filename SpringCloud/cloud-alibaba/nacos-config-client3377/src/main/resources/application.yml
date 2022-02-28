@@ -1,0 +1,5 @@
+spring:
+  profiles:
+    active: namespace
+  #active: info
+  #active: dev # 表示开发环境

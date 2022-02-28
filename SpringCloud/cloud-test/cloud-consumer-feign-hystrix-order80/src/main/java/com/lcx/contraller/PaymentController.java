@@ -33,7 +33,7 @@ public class PaymentController {
     }
 
     public String payment_global_default_fallback(){
-        System.out.println("controller");
+        System.out.println("com.lcx.controller");
         return "global default fallback";
     }
 

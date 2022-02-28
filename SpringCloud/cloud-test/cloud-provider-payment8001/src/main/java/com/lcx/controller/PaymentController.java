@@ -55,5 +55,9 @@ public class PaymentController {
             return new ReturnResult(200,"插入成功！" + serverPort,null);
         }
     }
+    @GetMapping("/payment/zipkin")
+    public String paymentZipkin(){
+        return "hi i am paymentZipkin";
+    }
 }
 

@@ -21,6 +21,12 @@
     <module>cloud-consumer-feign-hystrix-order80</module>
       <module>cloud-consumer-hystrix-dashboard9001</module>
       <module>cloud-gateway-gateway9527</module>
+      <module>cloud-config-center3344</module>
+    <module>cloud-config-client3355</module>
+      <module>cloud-config-client3366</module>
+    <module>cloud-stream-rabbitmq-provider8801</module>
+    <module>cloud-stream-rabbitmq-consumer8802</module>
+    <module>cloud-stream-rabbitmq-consumer8803</module>
 
   </modules>
   <!--表示这是一个父pom文件-->
@@ -40,6 +46,7 @@
     <openfeign.version>2.2.1.RELEASE</openfeign.version>
     <hystrix.version>2.2.1.RELEASE</hystrix.version>
     <gateway.version>2.2.1.RELEASE</gateway.version>
+    <spring_config.version>2.2.1.RELEASE</spring_config.version>
   </properties>
 
   <!--子模块继承之后，提供作用：锁定版本+子module不用groupId和version-->
@@ -121,7 +128,11 @@
         <artifactId>spring-cloud-starter-gateway</artifactId>
         <version>${gateway.version}</version>
       </dependency>
-
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-config-server</artifactId>
+        <version>${spring_config.version}</version>
+      </dependency>
     </dependencies>
 
 

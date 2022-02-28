@@ -1,0 +1,31 @@
+server:
+  port: 3344
+# curl -X POST http://localhost:3344/actuator/bus-refresh
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/lichangxinbaiqingyu/springcloud-config.git
+          search-paths:
+            - springcloud-config
+          force-pull: true
+          username: 2431424266@qq.com
+          password: lichangxin123
+      label: master
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+
+
+##rabbitmq相关配置,暴露bus刷新配置的端点
+management:
+  endpoints: #暴露bus刷新配置的端点
+    web:
+      exposure:
+        include: 'bus-refresh'
+
+
