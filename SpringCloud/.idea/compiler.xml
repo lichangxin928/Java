@@ -8,28 +8,29 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="clould-eureka-server7002" />
-        <module name="cloud-provider-payment8003" />
         <module name="cloud-config-center3344" />
-        <module name="cloud-provider-payment8002" />
-        <module name="cloud-config-client3355" />
         <module name="cloud-config-client3366" />
-        <module name="cloud-api-commons" />
-        <module name="cloud-provider-payment8001" />
         <module name="clould-eureka-server7001" />
         <module name="user-service" />
         <module name="cloud-consumer-feign-hystrix-order80" />
         <module name="cloud-stream-rabbitmq-provider8801" />
         <module name="eureka-server" />
-        <module name="cloud-consumer-hystrix-dashboard9001" />
         <module name="cloud-stream-rabbitmq-consumer8802" />
         <module name="cloud-stream-rabbitmq-consumer8803" />
         <module name="nacos-payment-provider9001" />
         <module name="nacos-payment-provider9002" />
-        <module name="cloud-gateway-gateway9527" />
         <module name="nacos-payment-consumer83" />
-        <module name="order-service" />
-        <module name="cloud-consumer-order80" />
         <module name="cloud-provider-hystrix-payment8001" />
+        <module name="cloud-provider-payment8003" />
+        <module name="cloud-provider-payment8002" />
+        <module name="cloud-config-client3355" />
+        <module name="cloud-api-commons" />
+        <module name="cloud-provider-payment8001" />
+        <module name="cloud-consumer-hystrix-dashboard9001" />
+        <module name="cloud-gateway-gateway9527" />
+        <module name="order-service" />
+        <module name="sentinel-service8401" />
+        <module name="cloud-consumer-order80" />
         <module name="nacos-config-client3377" />
       </profile>
     </annotationProcessing>
@@ -65,6 +66,7 @@
       <module name="nacos-payment-provider9001" target="8" />
       <module name="nacos-payment-provider9002" target="8" />
       <module name="order-service" target="1.8" />
+      <module name="sentinel-service8401" target="8" />
       <module name="user-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>

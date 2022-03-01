@@ -9,6 +9,8 @@
     <file url="file://$PROJECT_DIR$/cloud-alibaba/nacos-payment-provider9001/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-alibaba/nacos-payment-provider9002/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-alibaba/nacos-payment-provider9002/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-alibaba/sentinel-service8401/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-alibaba/sentinel-service8401/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-demo/eureka-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-demo/order-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-demo/user-service/src/main/java" charset="UTF-8" />

@@ -35,10 +35,6 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.0" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.0" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.0" />
-          <element id="archive" name="SSM-1.0-SNAPSHOT.jar">
-            <element id="module-output" name="Spring-Web" />
-          </element>
-          <element id="library" level="project" name="Maven: com.alibaba:druid:1.1.12" />
         </element>
       </element>
       <element id="directory" name="META-INF">

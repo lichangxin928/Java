@@ -8,7 +8,7 @@ import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class AppTest 
-{
+{;
     @Test
     public void Test01(){
         String config = "ApplicationContext.xml";

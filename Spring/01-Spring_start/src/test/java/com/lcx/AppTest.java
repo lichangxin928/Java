@@ -4,6 +4,7 @@ import static org.junit.Assert.assertTrue;
 
 import com.lcx.pa1.SomeService;
 import com.lcx.pa1.SomeServiceImpl;
+import com.lcx.pa1.Student;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -37,7 +38,7 @@ public class AppTest
         // 2. 创建表示spring 容器的对象。 applicationContext
         // ApplicationContext 就是表示 spring 的容器
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext(config);
-        SomeService someService = (SomeService) applicationContext.getBean("someService");
+        Student someService = (Student) applicationContext.getBean("someService");
         someService.doSome();
     }
 
