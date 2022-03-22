@@ -2,11 +2,14 @@ package com.lcx;
 
 import static org.junit.Assert.assertTrue;
 
+import com.lcx.pa1.Config;
 import com.lcx.pa1.SomeService;
 import com.lcx.pa1.SomeServiceImpl;
 import com.lcx.pa1.Student;
 import org.junit.Test;
+import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Date;
@@ -40,6 +43,8 @@ public class AppTest
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext(config);
         Student someService = (Student) applicationContext.getBean("someService");
         someService.doSome();
+        BeanFactory beanFactory = someService.getBeanFactory();
+        System.out.println(beanFactory);
     }
 
     /**
@@ -79,4 +84,30 @@ public class AppTest
      * 给java对象属性赋值
      */
 
+
+    static class Variable{
+        static int a = 1;
+        static boolean flag = false;
+    }
+
+    public static void main(String []args){
+
+        new Thread(()->{
+            Variable.a ++;
+            Variable.flag = true;
+
+        }).start();
+        new Thread(()->{
+            if (Variable.flag){
+                System.out.println(Variable.a);
+            }
+        }).start();
+
+    }
+
+
+    @Test
+    public void ThreeCache(){
+        ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+    }
 }

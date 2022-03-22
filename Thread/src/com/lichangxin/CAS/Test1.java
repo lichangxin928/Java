@@ -29,17 +29,17 @@ class CASCounter{
         return value;
     }
 
-    private boolean compareAndSwap(long expectionValue,long newValue){
+    private boolean compareAndSwap(long exceptionValue,long newValue){
         // 加锁防止此方法在执行过程中被其他线程调用
-        synchronized (this){
-            if(value == expectionValue){
+         synchronized (this){
+            if(value == exceptionValue){
                 value = newValue;
                 return true;
             }else{
                 System.out.println("不符合预期");
                 return  false;
             }
-        }
+         }
     }
     public long incrementAndGet(){
         long oldValue;

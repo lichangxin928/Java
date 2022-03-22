@@ -49,9 +49,9 @@
     </environments>
     <mappers>
 <!--        第一种方式-->
-<!--        <mapper resource="com/lcx/dao/StudentDao.xml"/>-->
+        <mapper resource="com/lcx/dao/StudentDao.xml"/>
 <!--        第二种方式 包名-->
-        <package name="com/lcx/dao"/>
+<!--        <package name="com/lcx/dao"/>-->
     </mappers>
 </configuration>
         <!--

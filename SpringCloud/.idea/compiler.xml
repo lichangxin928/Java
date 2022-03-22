@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <option name="BUILD_PROCESS_ADDITIONAL_VM_OPTIONS" value="-Djps.track.ap.dependencies=false" />
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
@@ -11,6 +12,7 @@
         <module name="cloud-config-center3344" />
         <module name="cloud-config-client3366" />
         <module name="clould-eureka-server7001" />
+        <module name="seata-order-service2001" />
         <module name="user-service" />
         <module name="cloud-consumer-feign-hystrix-order80" />
         <module name="cloud-stream-rabbitmq-provider8801" />
@@ -28,6 +30,8 @@
         <module name="cloud-provider-payment8001" />
         <module name="cloud-consumer-hystrix-dashboard9001" />
         <module name="cloud-gateway-gateway9527" />
+        <module name="seata-account-service2003" />
+        <module name="seata-storage-service2002" />
         <module name="order-service" />
         <module name="sentinel-service8401" />
         <module name="cloud-consumer-order80" />
@@ -66,6 +70,9 @@
       <module name="nacos-payment-provider9001" target="8" />
       <module name="nacos-payment-provider9002" target="8" />
       <module name="order-service" target="1.8" />
+      <module name="seata-account-service2003" target="8" />
+      <module name="seata-order-service2001" target="8" />
+      <module name="seata-storage-service2002" target="8" />
       <module name="sentinel-service8401" target="8" />
       <module name="user-service" target="1.8" />
     </bytecodeTargetLevel>

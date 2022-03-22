@@ -13,7 +13,7 @@ public class MyApp {
         SomeService target = new SomeServiceImpl();
 
         // 创建 InvocationHandler对象
-        InvocationHandler handler = new MyInvocationHandler(target);
+        MyInvocationHandler handler = new MyInvocationHandler(target);
 
         // 创建代理对象
         SomeService proxy = (SomeService) Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(),handler);

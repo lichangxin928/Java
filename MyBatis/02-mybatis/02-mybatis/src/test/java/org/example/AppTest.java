@@ -1,5 +1,7 @@
 package org.example;
 
+import com.lcx.Service.UserService;
+import com.lcx.Service.UserServiceImpl;
 import com.lcx.dao.StudentDao;
 import com.lcx.dao.impl.StudentDaoImpl;
 import com.lcx.domain.User;
@@ -7,6 +9,7 @@ import com.lcx.utils.MyBaitsUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
+import java.lang.reflect.Proxy;
 import java.util.List;
 
 /**
@@ -50,9 +53,28 @@ public class AppTest
      */
     @Test
     public void testManyParam(){
+        User user = new User();
+        user.setName("lcx");
+        user.setId(1);
         SqlSession sqlSession = MyBaitsUtils.getSqlSession();
+        sqlSession.selectOne("com.lcx.dao.StudentDao.selectUserByIdAndName",user);
         StudentDao da = sqlSession.getMapper(StudentDao.class);
-        User user = da.selectUserByIdAndName(1, "12");
+        user = da.selectUserByIdAndName(1, "1");
         System.out.println(user);
+    }
+
+
+    @Test
+    public void ProxyTest(){
+        UserService userService = new UserServiceImpl();
+        UserService o = (UserService)Proxy.newProxyInstance(userService.getClass().getClassLoader(),
+                userService.getClass().getInterfaces(),
+                (proxy,method,args) -> {
+                    System.out.println(method.getName());
+                    method.invoke(userService,args);
+                    return "fafa";
+                });
+        String str = o.hello();
+        System.out.println(str);
     }
 }
