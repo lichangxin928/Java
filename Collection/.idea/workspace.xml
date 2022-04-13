@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8454f55d-de2f-4edc-a5e7-28305e0f0c1c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hello.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lcx/DynamicProxy/CglibInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lcx/DynamicProxy/JDKInvokeHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lcx/GenericParadigm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lcx/HashMapSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lcx/IO/JavaIOStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lcx/ProxyCGLIB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lcx/ProxyJDK.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lcx/ThreadPool/ThreadPoolSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lcx/domain/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lcx/domain/Cat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lcx/domain/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringMVC/02-SpringMVC/src/main/Test/com/lcx/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thread/src/com/lichangxin/HashMapSource/HashMapSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thread/src/com/lichangxin/JUC/CyclicBarrierTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Note/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Note/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVC/02-SpringMVC/02-SpringMVC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringMVC/02-SpringMVC/02-SpringMVC.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVC/02-SpringMVC/src/main/resources/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringMVC/02-SpringMVC/src/main/resources/springmvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVC/02-SpringMVC/target/02-SpringMVC-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringMVC/02-SpringMVC/target/02-SpringMVC-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVC/02-SpringMVC/target/02-SpringMVC-1.0-SNAPSHOT/WEB-INF/view/show.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringMVC/02-SpringMVC/target/02-SpringMVC-1.0-SNAPSHOT/WEB-INF/view/show.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Thread/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Thread/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/CAS/CASCounter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/CAS/Indicator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/CAS/Test1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/CAS/Test1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/CAS/Test2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/CAS/Test2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/CAS/Test3$AddThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/CAS/Test3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/CAS/Test4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/CAS/Test5$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/CAS/Test5$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/CAS/Test5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/CAS/Test6$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/CAS/Test6$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/CAS/Test6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/CAS/Test7$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/CAS/Test7$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/CAS/Test7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/CAS/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/CAS/subThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Communication/Cons.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Communication/ConsumerThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Communication/Interrupt$subThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Communication/Interrupt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Communication/Notify$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Communication/Notify$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Communication/Notify.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Communication/PipeThread$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Communication/PipeThread$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Communication/PipeThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Communication/ProAndCon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Communication/Producer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Communication/ProduerThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Communication/Stack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Communication/Test$ThreadAdd.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Communication/Test$ThreadSub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Communication/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Communication/Test1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Communication/Test2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Communication/Test3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Communication/WaitAndNotice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/FairLock$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/FairLock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/MethodsOfReentrant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/Reentrant1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/Reentrant1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/Reentrant2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/Reentrant2$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/Reentrant2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/Reentrant3$SubThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/Reentrant3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/Reentrant4$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/Reentrant4$Server.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/Reentrant4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/Reentrant5$IntLock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/Reentrant5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/Test$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/TryLock1$TimeLock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/TryLock1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/TryLock2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/TryLock3$IntLock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/TryLock3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/newCondition1$SubThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/newCondition1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/newCondition2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/newCondition2$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/newCondition2$server.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/newCondition2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/newCondition3$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/newCondition3$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/newCondition3$MyClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/newCondition3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Lock/newCondition4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/ThreadLocalTest/DateConversion$parseDate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/ThreadLocalTest/DateConversion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/ThreadLocalTest/Local$SubThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/ThreadLocalTest/Local.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/ThreadPool/Test$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/ThreadPool/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/ThreadPool/Test2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/ThreadPool/Test2$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/ThreadPool/Test2$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/ThreadPool/Test2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/ThreadPool/poolshixian.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Volatile/Test1$Print.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Volatile/Test1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Volatile/Test2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Volatile/Test2$Print.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Volatile/Test2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Volatile/Test3$MyThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Volatile/Test3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Volatile/Test4$MyThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Volatile/Test4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/Volatile/Test5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/base/p1/Mythread.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/base/p1/Mythread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/base/p1/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/base/p1/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/base/p2/Mythread.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/base/p2/Mythread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/base/p2/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/base/p2/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/methods/currentGetname/MyRunnable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/methods/currentGetname/Test$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/methods/currentGetname/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/methods/getName/Mythread1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/methods/getName/Mythread2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/methods/getName/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/methods/getName/Test2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/methods/getid/getid.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/methods/getid/test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/methods/interrupt/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/methods/interrupt/subThread1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/methods/isalive/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/methods/isalive/subThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/methods/setDaemon/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/methods/setDaemon/thread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/methods/setpriorty/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/methods/setpriorty/subThread1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/methods/setpriorty/subThread2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/methods/sleep/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/methods/sleep/simpleTimer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/methods/sleep/subThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/methods/yield/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/methods/yield/subThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/more/feature/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/more/life/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/readWriteLock/readAndWrite$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/readWriteLock/readAndWrite$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/readWriteLock/readAndWrite$Service.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/readWriteLock/readAndWrite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/readWriteLock/syncRead$Service$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/readWriteLock/syncRead$Service.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/readWriteLock/syncRead.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/readWriteLock/writeLock$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/readWriteLock/writeLock$Service.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/readWriteLock/writeLock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/sync/Test$subThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/sync/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/threadGroup/Test01$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/threadGroup/Test01.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/threadGroup/baseOperation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/threadsafety/Atomic$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/threadsafety/Atomic$Myclass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/threadsafety/Atomic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/threadsafety/Ordering.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/threadsafety/Serial.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/threadsafety/visibility$Mytest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/out/production/Thread/com/lichangxin/threadsafety/visibility.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebDemo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebDemo/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/.idea/misc.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/../../../Program Files/Java/jdk1.8.0_221/src.zip!/java/util/Map.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jar://$PROJECT_DIR$/../../../Program Files/Java/jdk1.8.0_221/src.zip!/java/util/HashMap.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectId" id="273uvgiqEATlSSF7bZldQ9JW7WL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showModules" value="false" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.12360942" />
+    <property name="project.structure.side.proportion" value="0.14124292" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="ReaderModeSettings">
+    <option name="enabled" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\code\Java\Collection" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.JavaIOStream">
+    <configuration name="GenericParadigm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lcx.GenericParadigm" />
+      <module name="Collection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lcx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HashMapSource" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lcx.HashMapSource" />
+      <module name="Collection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lcx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JavaIOStream" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lcx.IO.JavaIOStream" />
+      <module name="Collection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lcx.IO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProxyCGLIB" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lcx.ProxyCGLIB" />
+      <module name="Collection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lcx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProxyJDK" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lcx.ProxyJDK" />
+      <module name="Collection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lcx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.JavaIOStream" />
+        <item itemvalue="Application.ProxyCGLIB" />
+        <item itemvalue="Application.ProxyJDK" />
+        <item itemvalue="Application.GenericParadigm" />
+        <item itemvalue="Application.HashMapSource" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8454f55d-de2f-4edc-a5e7-28305e0f0c1c" name="Changes" comment="" />
+      <created>1648561324583</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1648561324583</updated>
+      <workItem from="1648561329872" duration="2319000" />
+      <workItem from="1648602482359" duration="7582000" />
+      <workItem from="1648612476456" duration="1454000" />
+      <workItem from="1648618281287" duration="14703000" />
+      <workItem from="1648688922484" duration="925000" />
+      <workItem from="1648718947833" duration="8654000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
