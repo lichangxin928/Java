@@ -9,7 +9,7 @@ package com.lichangxin.CAS;
 * */
 public class Test1 {
     public static void main(String[] args) {
-        CASCounter casCounter = new CASCounter();
+        final CASCounter casCounter = new CASCounter();
         for (int i = 0;i<1000;i++){
             new Thread(new Runnable() {
                 @Override

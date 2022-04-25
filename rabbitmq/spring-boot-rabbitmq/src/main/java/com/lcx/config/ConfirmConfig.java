@@ -26,7 +26,7 @@ public class ConfirmConfig {
         ExchangeBuilder exchangeBuilder =
                 ExchangeBuilder.directExchange(EXCHANGE_NAME)
                         .durable(true)
-                        .withArgument("alternate-exchange", BACKUP_EXCHANGE_NAME);
+                        .withArgument("alternate-exchange", BACKUP_EXCHANGE_NAME); // 备份的exchange 名称
         return exchangeBuilder.build();
     }
 

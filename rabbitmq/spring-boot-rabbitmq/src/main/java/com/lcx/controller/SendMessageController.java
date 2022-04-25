@@ -4,7 +4,6 @@ package com.lcx.controller;
 import com.lcx.config.ConfirmConfig;
 import com.lcx.config.DelayedQueueConfig;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.amqp.core.MessagePostProcessor;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
