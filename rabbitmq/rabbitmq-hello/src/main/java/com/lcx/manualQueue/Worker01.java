@@ -12,6 +12,7 @@ public class Worker01 {
 
     public static void main(String[] args) throws IOException {
         Channel channel = RabbitMqUtils.getChannel();
+//        channel.queueDeclare(TASK_QUEUE_NAME,false,false,false,null);
         System.out.println("c1 等待");
         channel.basicQos(2);
         // 手动应答
@@ -25,5 +26,7 @@ public class Worker01 {
                     System.out.println("消息接收失败");
 
                 });
+
+        System.out.println("完成");
     }
 }

@@ -14,6 +14,8 @@ public class Worker01 {
 
     public static void main(String[] args) throws IOException {
         Channel channel = RabbitMqUtils.getChannel();
+        channel.queueDeclare(QUEUE_NAME,false,false,false,null);
+//        channel.queueBind(QUEUE_NAME,"","hello");
 
         System.out.println("worker 1 等待消息");
         channel.basicConsume(QUEUE_NAME,false,(tag,msg)->{
