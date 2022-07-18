@@ -33,9 +33,14 @@ public class WaitAndNotice {
 
         try {
             String test = "lcx";
+            String test2 = "aaa";
 //            String test1 = "lcx";
             System.out.println("同步代码块前面");
-            synchronized (test) {
+
+            synchronized (test2){
+                test.notify();
+            }
+            synchronized (test2) {
                 System.out.println("同步代码块开始...");
                 test.wait();
                 // 当前线程会一直等待

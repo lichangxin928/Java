@@ -11,7 +11,7 @@ public class FairLock {
     * 成本高
     *
     * */
-    static ReentrantLock reentrantLock = new ReentrantLock(true); // 非公平锁
+    static ReentrantLock reentrantLock = new ReentrantLock(false); // 非公平锁
     public static void main(String[] args) {
         Runnable runnable = new Runnable() {
             @Override
@@ -20,6 +20,9 @@ public class FairLock {
                     try {
                         reentrantLock.lock();
                         System.out.println(Thread.currentThread().getName() + " 获得了锁");
+                        Thread.sleep(100000000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
                     } finally {
                         reentrantLock.unlock();
                     }

@@ -1,0 +1,17 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: ihrm-company #指定服务名
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://106.14.242.94:3306/demo_test?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: Lichangxin+123
+  jpa:
+    database: MySQL
+    show-sql: true
+    open-in-view: true
+  redis:
+    host: 106.14.242.94
+    port: 6888

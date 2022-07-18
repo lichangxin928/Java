@@ -13,12 +13,12 @@ package mid;
  */
 public class ContainerWithMostWater {
     public static void main(String[] args) {
-        int [] arr = {4,3,2,1,4};
+        int [] arr = {2,3,4,5,18,17,6};
         ContainerWithMostWater water = new ContainerWithMostWater();
         int i = water.maxArea(arr);
         System.out.println(i);
     }
-    public int maxArea(int[] height) {
+    public int maxArea2(int[] height) {
         int left = 0,right = height.length - 1;
 
         int maxArea = 0;
@@ -51,4 +51,22 @@ public class ContainerWithMostWater {
         if(OldArea > newArea) return OldArea;
         else return newArea;
     }
+
+    public int maxArea(int[] height) {
+        int res = 0;
+        int left = 0;
+        int right = height.length - 1;
+        while(left < right){
+            int area = getArea(height[left],height[right],right - left);
+            if(res < area) res = area;
+            if(height[left] > height[right]) right --;
+            else left ++;
+        }
+        return res;
+    }
+
+    public static int getArea(int leftHight,int rightHight,int width ){
+        return leftHight > rightHight? rightHight * width : leftHight * width;
+    }
+
 }
